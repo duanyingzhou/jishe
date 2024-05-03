@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>立即购买页面</title>
+	<link href="css/common.css" rel="stylesheet" />
+	<link href="css/purchase.css" rel="stylesheet" />
+	<link rel="stylesheet" href="purchase.css">
+</head>
+
+<body>
+
+	<form class="order-container" id="form1">
+
+		<div class="order-item" style="position: relative;margin-top: 24px;">
+			<h3 class="order-item-hd">收货人信息</h3>
+
+			<div class="order-item-content">
+				<div class="order-item-li">
+					<label class="order-item-title">收货人</label>
+					<input class="order-item-input" placeholder="请输入收货人姓名" type="text" />
+				</div>
+				<div class="order-item-li">
+					<label class="order-item-title">手机号码</label>
+					<input class="order-item-input" placeholder="请输入收货人手机号码" type="text" />
+				</div>
+				<div class="order-item-li">
+					<label class="order-item-title">所在地区</label>
+					<select class="order-item-select">
+						<option value="">湖南省</option>
+						<option value="">河北省</option>
+						<option value="">江苏省</option>
+						<option value="">河南省</option>
+					</select>
+					<select class="order-item-select">
+						<option value="">长沙市</option>
+						<option value="">南京市</option>
+						<option value="">杭州市</option>
+						<option value="">郑州市</option>
+					</select>
+					<select class="order-item-select" style="width: 142px;">
+						<option value="">天心区</option>
+						<option value="">岳麓区</option>
+						<option value="">开福区区</option>
+						<option value="">望城区</option>
+					</select>
+					<!-- <span class="order-item-wrong"></span> -->
+				</div>
+
+				<div class="order-item-li">
+					<label class="order-item-title">详细地址</label>
+					<div class="order-item-input-box">
+						<span class="order-item-addr-header">湖南省长沙市天心区</span>
+						<input placeholder="请输入收货人详细地址" type="text" style="padding-left: 124px;width: 222px;" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="order-item">
+			<h3 class="order-item-hd">送达日期</h3>
+			<div class="order-item-content">
+				<div class="order-item-li">
+					<label class="order-item-title">送达日期</label>
+					<input class="order-item-input" placeholder="请输入送达日期" />
+				</div>
+			</div>
+		</div>
+
+		<div class="order-item">
+			<div class="order-item-hd">
+				<h5>商品备注</h5>
+			</div>
+			<div class="order-item-box">
+				<div class="order-item-left">
+					<textarea class="order-item-left-textarea" placeholder="商品备注：最多30字。"></textarea>
+				</div>
+				<div class="order-item-right"></div>
+			</div>
+		</div>
+
+		<div class="order-item order-item-border-bottom order-item-line">
+
+			<h3 class="order-item-hd">核对购物清单</h3>
+			<div class="order-item-product-list">
+				<div class="order-item-product-li">
+					<a href="#" target="_blank" style="display: inline-block; width: 100%; height: 100%;">
+						<div class="order-item-product-pic">
+							<img src="./images/1.jpg" alt="RIS-2020" / style="width: 200px; height: 200px;">
+						</div>
+						<div class="order-item-product-info">
+							<p class="order-item-product-name">RIS-2020</p>
+						</div>
+						<span class="order-item-product-iprice">1899</span>
+						<span class="order-item-product-count">x1</span>
+				</div>
+			</div>
+			</a>
+		</div>
+
+		<div class="order-item-footer">
+			<div class="order-item-footer-left">
+				<div class="order-item-footer-send">
+					<span class="send-title">配送至:</span>
+				</div>
+				<div class="order-item-footer-receiver">
+					<span class="receiver-name">桔梗</span>
+					<span id="receiver_tel">19119551779</span>
+				</div>
+			</div>
+			<div class="order-item-footer-right">
+				<div class="order-item-footer-price">
+					共<span id="pro_count" class="pro-count">1</span>件商品，总商品金额:
+					<span id="pro_price" class="pro-price">1899</span>
+				</div>
+				<div class="order-item-footer-pay">
+					应付:<span class="pay-price">1899</span>
+					<button class="pay-btn"><a href="pay.html" style="color: #fff;">提交订单</a></button>
+				</div>
+			</div>
+		</div>
+	</form>
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+
+.top{
+    text-align: center;
+}
+
+.top p{
+    color: #333;
+}
+
+.top  .icon-zhifubaozhifu{
+    color: #1296db;
+    font-size: 26px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+
+.middle{
+    margin-top: 40px;
+    text-align: center;
+}
+
+.middle p{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.middle img{
+    width: 160px;
+    height: 160px;
+}
+
+.middle .icon-xiangxiajiantou{
+    color: #1296db;
+}
+    
+.bottom{
+    margin-top: 60px;
+}
+
+.bottom .wrapper{
+    display: flex;
+    margin-left: 670px;
+}
+
+.bottom .icon-saoyisao{
+    color: #1296db;
+    font-size: 42px;
+   vertical-align: middle;
+   margin-right: 20px;   
+}
+
+.bottom .right{
+    width: 130px;
+}
+
+.bottom .text{
+    font-size: 14px ;
+}
+
+.foot{
+    /* text-align: center; */
+    margin: 0 auto;
+    margin-top: 40px;
+    font-size: 10px;
+    opacity: .8;
+}
+
+.foot p{
+    width: 160px ;
+    margin: 0 auto;
+}
