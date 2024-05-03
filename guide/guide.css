@@ -1,0 +1,683 @@
+.header .nav ul li #guide {
+    color: #005aad;
+}
+
+body {
+    text-align: left;
+    font-size: 1.4rem;
+    color: #333333;
+    line-height: 2.8rem;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", 微软雅黑, Arial, sans-serif;
+    width: 100%;
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+}
+
+.common-banner {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover, 2rem 2rem;
+    height: 60rem;
+}
+
+.container {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+form,
+div,
+p {
+    display: block;
+}
+
+div,
+input,
+p,
+span {
+    box-sizing: border-box;
+}
+
+#header .ax-row,
+.common-banner .ax-row {
+    height: 100%;
+    align-items: center;
+}
+
+.common-banner .ax-row {
+    color: #fff;
+}
+
+.ax-row {
+    width: 144rem;
+    max-width: 75%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.ax-row {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 100%;
+    zoom: 1;
+}
+
+.common-banner .ax-row h1 {
+    font-size: 4.8rem;
+    font-weight: 600;
+}
+
+h1 {
+    font-family: "Arial", "Helvetica Neue", "sans-serif", "pingfang SC", "Hiragino Sans GB", "微软雅黑", "microsoft yahei", "宋体", "simsun";
+    font-size: 2.8rem;
+    line-height: calc(2.8rem + 1.6rem);
+}
+
+.container {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.container .common_container {
+    width: 144rem;
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+.attendance_guide .tab {
+    margin-top: -5.4rem;
+    margin-bottom: 3rem;
+    z-index: 12;
+}
+
+.animate__fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+.animate__animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-duration: var(--animate-duration);
+    animation-duration: var(--animate-duration);
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.media .tab,
+.media .tab ul {
+    display: flex;
+}
+
+.media .tab {
+    background: url(../images/picture_tab.jpg) no-repeat center right;
+    height: 10.8rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.ax-shadow-cloud {
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.media .tab,
+.media .tab ul {
+    display: flex;
+}
+
+.fixednav {
+    position: fixed;
+    top: 40px;
+    left: 200px;
+    width: 144rem;
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+ul,
+li,
+form {
+    list-style-image: none;
+    list-style: none;
+    list-style-type: none;
+    list-style-position: outside;
+    margin: 0;
+    padding: 0;
+}
+
+.media .tab ul li.active {
+    background: linear-gradient(to right, #2b76bc, #2db1ba);
+    color: #fff;
+}
+
+.media .tab ul li {
+    cursor: pointer;
+    width: 16rem;
+    height: 4rem;
+    border: .1rem solid #2db1ba;
+    color: #2db1ba;
+    transition: all .3s ease-out;
+    font-size: 1.6rem;
+    line-height: 4rem;
+    text-align: center;
+    border-radius: 5rem;
+    margin: 0 2rem;
+}
+
+.media .tab ul li {
+    cursor: pointer;
+    width: 16rem;
+    height: 4rem;
+    border: .1rem solid #2db1ba;
+    color: #2db1ba;
+    transition: all .3s ease-out;
+    font-size: 1.6rem;
+    line-height: 4rem;
+    text-align: center;
+    border-radius: 5rem;
+    margin: 0 2rem;
+}
+
+.attendance_guide #hallPlan,
+.attendance_guide #transport {
+    position: relative;
+    padding-bottom: 6rem;
+}
+
+.attendance_guide #hallPlan {
+    background: url(../images/canhui_bg.jpg) no-repeat center bottom / cover;
+    overflow: hidden;
+}
+
+form,
+div,
+p {
+    display: block;
+}
+
+div,
+input,
+p,
+span {
+    box-sizing: border-box;
+}
+
+blockquote,
+body,
+button,
+code,
+dd,
+div,
+dl,
+dt,
+fieldset,
+figure,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+iframe,
+input,
+legend,
+li,
+ol,
+p,
+pre,
+select,
+td,
+textarea,
+th,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.container .common_container .title {
+    text-align: center;
+    padding-top: 9rem;
+}
+
+.attendance_guide .title {
+    margin: 0 auto 4rem;
+    color: #2db1ba;
+}
+
+.title {
+    margin: 20px 30px;
+}
+
+.animate__fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+
+.animate__animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-duration: var(--animate-duration);
+    animation-duration: var(--animate-duration);
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.container .common_container .title h1 {
+    font-size: 3.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.container .common_container .title span:last-child {
+    font-size: 1.4rem;
+}
+
+.container .common_container .title span {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: .4rem;
+}
+
+.attendance_guide #hallPlan .ax-tab-nav {
+    display: flex;
+    justify-content: center;
+    height: 5rem;
+    margin: 5rem auto 3rem;
+    position: relative;
+    z-index: 2;
+}
+
+.attendance_guide #hallPlan .ax-tab-nav li.ax-active,
+.media .ax-tab-nav .ax-active,
+.new .ax-card-block:hover .ax-title h1 {
+    color: #2db1ba;
+    border-bottom: solid 2px #2db1ba;
+}
+
+.attendance_guide #hallPlan .ax-tab-nav li {
+    max-width: 30rem;
+    text-align: center;
+    height: 100%;
+    color: #999;
+    position: relative;
+    cursor: pointer;
+    padding: 0 3rem;
+    font-size: 2.2rem;
+}
+
+.ax-tab .ax-tab-content {
+    transition: all 200ms linear;
+}
+
+.ax-tab .ax-tab-content .ax-active {
+    display: block;
+}
+
+.attendance_guide #hallPlan .ax-tab-content img,
+.attendance_guide #hallPlan .ax-tab-nav li.ax-active::before,
+.poster .ax-item img {
+    width: 100%;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+img {
+    vertical-align: top;
+}
+
+fieldset,
+frame,
+iframe,
+img {
+    border: 0;
+}
+
+.ax-tab .ax-tab-content>*:not(.ax-active) {
+    display: none;
+}
+
+.attendance_guide #hallPlan,
+.attendance_guide #transport {
+    position: relative;
+    padding-bottom: 6rem;
+}
+
+.attendance_guide #transport .ax-row {
+    position: relative;
+    z-index: 2;
+    padding: 5.8rem 0;
+    transition: all .3s;
+    justify-content: space-around;
+    background: #fff;
+}
+
+.container .common_container .ax-row {
+    max-width: initial;
+}
+
+.attendance_guide #transport .ax-row .ax-col h1 {
+    font-size: 2.4rem;
+    position: relative;
+    line-height: 1;
+    margin-bottom: 3.6rem;
+}
+
+.attendance_guide #Sign_In .ax-row .ax-col h1:after,
+.attendance_guide #transport .ax-row .ax-col h1:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -2.5rem;
+    width: .4rem;
+    height: 2.4rem;
+    top: 0;
+    background-image: linear-gradient(47deg, #3b7bc9, #59afb8);
+}
+
+.attendance_guide #transport .ax-row .ax-col .item {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.icon {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: block;
+    width: 3rem;
+    height: 3rem;
+}
+
+.attendance_guide #transport .ax-row .ax-col {
+    padding-left: 2.5rem;
+    max-width: 55rem;
+    overflow: hidden;
+}
+
+.attendance_guide #transport .ax-row .ax-col h1 {
+    font-size: 2.4rem;
+    position: relative;
+    line-height: 1;
+    margin-bottom: 3.6rem;
+}
+
+.attendance_guide #transport .ax-row .ax-col .item .route {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 6.5rem);
+    font-size: 1.6rem;
+}
+
+.text-overflow,
+.text-overflow2,
+.text-overflow3 {
+    display: -webkit-box;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.attendance_guide #transport .ax-row .ax-col .item .icon {
+    color: #2db1ba;
+    text-align: center;
+    font-size: 1.4rem;
+    width: 3rem;
+    margin-right: 2rem;
+    height: auto;
+}
+
+.ax-gutter-line {
+    height: 100%;
+    width: 1px;
+    background-color: #ebebeb;
+}
+
+.attendance_guide #notice {
+    background: url(../images/canhui_bg2.jpg) no-repeat center center / cover;
+    padding-bottom: 5.8rem;
+}
+
+.attendance_guide #notice .title {
+    margin: 0;
+    color: #fff;
+}
+
+.container .common_container .title h1 {
+    font-size: 3.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.container .common_container .title span:last-child {
+    font-size: 1.4rem;
+}
+
+.container .common_container .title span {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: .4rem;
+}
+
+.ax-row {
+    width: 144rem;
+    max-width: 75%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.ax-row {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 100%;
+    zoom: 1;
+}
+
+.attendance_guide #notice .ax-row {
+    margin-top: 5rem;
+    background: rgba(255, 255, 255, .9);
+    max-height: 50rem;
+    overflow: hidden;
+}
+
+.attendance_guide #notice .ax-row #wrapper1 {
+    width: 100%;
+    padding: 4.8rem 4.8rem 0;
+    font-size: 1.6rem;
+    overflow-y: scroll;
+}
+
+.attendance_guide #Sign_In .ax-row {
+    padding: 5.8rem 0;
+    margin-top: 6rem;
+    transition: all .5s;
+    justify-content: space-around;
+}
+
+.attendance_guide #Sign_In .ax-row,
+.attendance_guide #Sign_In .ax-shadow-cloud {
+    transition: all .3s;
+    background: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.container .common_container .ax-row {
+    max-width: initial;
+}
+
+.ax-row {
+    width: 144rem;
+    max-width: 75%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.ax-row {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 100%;
+    zoom: 1;
+}
+
+.attendance_guide #Sign_In .ax-row,
+.attendance_guide #Sign_In .ax-shadow-cloud {
+    transition: all .3s;
+    background: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.attendance_guide #Sign_In .ax-row .ax-col {
+    padding-left: 7%;
+}
+
+.attendance_guide #Sign_In .ax-row .ax-col h1 {
+    font-size: 2.4rem;
+    position: relative;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+}
+
+.attendance_guide #Sign_In .ax-row .ax-col p {
+    padding: 0;
+    margin-bottom: .5rem;
+}
+
+.ax-gutter-line {
+    height: 100%;
+    width: 1px;
+    background-color: #ebebeb;
+}
+
+.attendance_guide #Sign_In .ax-row .ax-col {
+    padding-left: 7%;
+}
+
+.ax-col {
+    display: block;
+    flex: auto;
+    width: 0;
+    position: relative;
+}
+
+.attendance_guide #Sign_In .ax-row .ax-col p {
+    padding: 0;
+    margin-bottom: .5rem;
+}
+
+.attendance_guide #Sign_In .ax-shadow-cloud .des {
+    padding: 0 8rem 4rem;
+    background: #fff;
+}
+
+.attendance_guide #Sign_In,
+.attendance_guide #contact {
+    position: relative;
+    padding-bottom: 6rem;
+}
+
+.attendance_guide #Sign_In .ax-shadow-cloud .des p {
+    padding: 0;
+}
+
+.attendance_guide #Sign_In .ax-shadow-cloud .des {
+    padding: 0 8rem 4rem;
+    background: #fff;
+}
+
+.attendance_guide #Sign_In:after {
+    content: "";
+    background: url(../images/icon_bg1.png) no-repeat center center / cover;
+    width: 52.4rem;
+    height: 64.7rem;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.attendance_guide #contact .ax-row {
+    margin-top: 6rem;
+    justify-content: space-between;
+}
+
+.container .common_container .ax-row {
+    max-width: initial;
+}
+
+.attendance_guide #contact .ax-shadow-cloud {
+    transition: all .3s;
+    background: #fff;
+    position: relative;
+    background-color: #fff;
+    z-index: 2;
+    background: url(../img/canhui_bg3.jpg) no-repeat center right / cover;
+    width: 49%;
+    height: 26rem;
+    padding-left: 9rem;
+    padding-top: 5rem;
+}
+
+.attendance_guide #contact .ax-shadow-cloud .name {
+    display: flex;
+    align-items: flex-end;
+    line-height: 1;
+}
+
+.attendance_guide #contact .ax-shadow-cloud .name h1 {
+    font-size: 3rem;
+    line-height: 1;
+    margin-right: 2.4rem;
+}
+
+.attendance_guide #contact .ax-shadow-cloud .name span {
+    font-size: 1.6rem;
+    line-height: 1.2;
+}
+
+.attendance_guide #contact .ax-shadow-cloud ul {
+    margin-top: 4rem;
+}
+
+.attendance_guide #contact .ax-shadow-cloud ul li span {
+    color: #333;
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+.attendance_guide #contact .ax-shadow-cloud ul li span {
+    color: #333;
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+.attendance_guide #contact .ax-shadow-cloud ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.attendance_guide #contact .ax-shadow-cloud ul li span.iconfont {
+    color: #2db1ba;
+    font-size: 2.8rem;
+    line-height: 1;
+    margin-right: 2.4rem;
+}
