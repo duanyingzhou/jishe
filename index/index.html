@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../base.css">
+    <link rel="stylesheet" href="../index/index.css">
+    <link rel="stylesheet" href="../head/head.css">
+    <link rel="stylesheet" href="../common/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../swiper/swiper.css">
+    <link rel="stylesheet" href="../swiper/swiper.min.css">
+    <script src="../swiper/swiper.js"></script>
+    <script src="../swiper/swiper.min.js"></script>
+    <script src="../html/lib/L2Dwidget.min.js"></script>
+    <title>2023西湖论剑·数字安全大会</title>
+    <style>
+        .swiper {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 300px;
+            height: 300px;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <script type="text/javascript" src="../head/head.js"></script>
+    <!-- 轮播图 -->
+    <div class="banner">
+        <ul>
+            <li class="item active"><a href=""><img src="../index/images/lunbo01.png" alt=""></a></li>
+            <li class="item"><a href=""><img src="../index/images/lunbo02.png" alt=""></a></li>
+            <li class="item"><a href=""><img src="../index/images/lunbo03.png" alt=""></a></li>
+        </ul>
+
+        <ol class="point">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+    <!-- 轮播图js -->
+    <script>
+        const data = [
+            { url: '../index/images/lunbo01.png' },
+            { url: '../index/images/lunbo02.png' },
+            { url: '../index/images/lunbo03.png' }
+        ]
+
+        const img = document.querySelector('.banner img')
+        let i = 0
+        //定时器播放
+        let timeId = setInterval(function () {
+            i++
+            if (i >= data.length) {
+                i = 0
+            }
+
+            img.src = data[i].url
+            document.querySelector('.banner .point .active').classList.remove('active')
+            document.querySelector(`.banner ol li:nth-child(${i + 1})`).classList.add('active')
+
+        }, 1000)
+
+        // 鼠标在盒子上停止定时器
+        const banner = document.querySelector('.banner')
+        banner.addEventListener('mouseenter', function () {
+            clearInterval(timeId)
+        })
+        //鼠标离开盒子开启定时器
+        banner.addEventListener('mouseleave', function () {
+            timeId = setInterval(function () {
+                i++
+                if (i >= data.length) {
+                    i = 0
+                }
+
+                img.src = data[i].url
+                document.querySelector('.banner .point .active').classList.remove('active')
+                document.querySelector(`.banner ol li:nth-child(${i + 1})`).classList.add('active')
+
+            }, 2000)
+        })
+    </script>
+
+    <!-- 大会议程 -->
+    <div class="conference">
+        <div class="wrapper">
+            <div class="hd">
+                <h3>大会议程</h3>
+                <ul>
+                    <li><a href="javascript::" class="iconfont icon-rili active" data-id="1">5月5日</a></li>
+                    <li><a href="javascript::" class="iconfont icon-rili" data-id="2">5月6日</a></li>
+                    <li><a href="javascript::" class="iconfont icon-rili" data-id="3">5月7日</a></li>
+                    <li><a href="javascript::" class="iconfont icon-rili" data-id="4">5月8日</a></li>
+
+                </ul>
+                <a href="" class="iconfont icon-youjiantou"></a>
+
+            </div>
+            <div class="bd">
+                <div class="left">
+                    <!-- 大会议程左边部分目录 -->
+                    <!-- 5.5日大会 -->
+                    <div class="item active">
+                        <div class="box">
+                            <div class="top">
+                                <div class="tag">科普论坛</div>
+                                <div class="tag-date">18:00-21:00</div>
+                            </div>
+                            <div class="text">格致论道@西湖论剑</div>
+                            <div class="location">
+                                <span class="iconfont icon-dingwei local "> 杭州市滨江区文化中心剧院..</span>
+                                <span class="iconfont icon-bofang review ">观看回放</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 5.6大会 -->
+                    <div class="item">
+                        <div class="box">
+                            <div class="top">
+                                <div class="tag">掌上论剑</div>
+                                <div class="tag-date">10:00-10:30</div>
+                            </div>
+                            <div class="text">95后极客Talk</div>
+                            <div class="location">
+                                <span class="iconfont icon-dingwei local "> 线上直播</span>
+                                <span class="iconfont icon-bofang review ">观看回放</span>
+                            </div>
+                        </div>
+
+                        <div class="box ">
+                            <div class="top">
+                                <div class="tag">掌上论剑</div>
+                                <div class="tag-date">13:00-13:30</div>
+                            </div>
+                            <div class="text">当科幻照进现实我们会更安全吗？</div>
+                            <div class="location">
+                                <span class="iconfont icon-dingwei local"> 线上直播</span>
+                                <span class="iconfont icon-bofang review">观看回放</span>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <div class="top">
+                                <div class="tag">掌上论剑</div>
+                                <div class="tag-date">15:00-15:30</div>
+                            </div>
+                            <div class="text">人工智能会颠覆安全行业吗？</div>
+                            <div class="location">
+                                <span class="iconfont icon-dingwei local"> 线上直播</span>
+                                <span class="iconfont icon-bofang review">观看回放</span>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <div class="top">
+                                <div class="tag">掌上论剑</div>
+                                <div class="tag-date">15:30-16:00</div>
+                            </div>
+                            <div class="text">反诈直播间@西湖论剑</div>
+                            <div class="location">
+                                <span class="iconfont icon-dingwei local"> 线上直播</span>
+                                <span class="iconfont icon-bofang review">观看回放</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 5.7大会 -->
+                    <div class="item">
+                        <div class="box">
+                            <div class="top">
+                                <div class="tag">主论坛</div>
+                                <div class="tag-date">09:00-12:00</div>
+                            </div>
+                            <div class="text">杭州洲际酒店 杭州厅</div>
+                            <div class="location">
+                                <span class="iconfont icon-dingwei local "> 杭州洲际酒店·杭州厅</span>
+                                <span class="iconfont icon-bofang review ">观看回放</span>
+                            </div>
+                        </div>
+
+                        <div class="box ">
+                            <div class="top">
+                                <div class="tag">主论坛</div>
+                                <div class="tag-date">09:00-22:00</div>
+                            </div>
+                            <div class="text">生态合作伙伴分论坛</div>
+                            <div class="location">
+                                <span class="iconfont icon-dingwei local"> 杭州洲际酒店·杭州厅</span>
+                                <span class="iconfont icon-bofang review">观看回放</span>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <div class="top">
+                                <div class="tag">主论坛</div>
+                                <div class="tag-date">13:30-18:00</div>
+                            </div>
+                            <div class="text">数字中国&安全治理论坛</div>
+                            <div class="location">
+                                <span class="iconfont icon-dingwei local"> 杭州洲际酒店·杭州厅</span>
+                                <span class="iconfont icon-bofang review">观看回放</span>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <div class="top">
+                                <div class="tag">主论坛</div>
+                                <div class="tag-date">13:30-17:10</div>
+                            </div>
+                            <div class="text">信创软件供应链安全论坛</div>
+                            <div class="location">
+                                <span class="iconfont icon-dingwei local"> 杭州洲际酒店·天津厅</span>
+                                <span class="iconfont icon-bofang review">观看回放</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 5.8大会 -->
+                    <div class="item">
+                        <div class="box">
+                            <div class="top">
+                                <div class="tag">平行论坛</div>
+                                <div class="tag-date">08:30-12:10</div>
+                            </div>
+                            <div class="text">教育技术产业融合创新发展论坛</div>
+                            <div class="location">
+                                <span class="iconfont icon-dingwei local "> 杭州洲际酒店 国际厅1厅</span>
+                                <span class="iconfont icon-bofang review ">观看回放</span>
+                            </div>
+                        </div>
+
+                        <div class="box ">
+                            <div class="top">
+                                <div class="tag">平行论坛</div>
+                                <div class="tag-date">09:00-12:00</div>
+                            </div>
+                            <div class="text">商用密码应用论坛</div>
+                            <div class="location">
+                                <span class="iconfont icon-dingwei local"> 杭州洲际酒店 国际厅2厅</span>
+                                <span class="iconfont icon-bofang review">观看回放</span>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <div class="top">
+                                <div class="tag">第二直播间</div>
+                                <div class="tag-date">09:30-12:00</div>
+                            </div>
+                            <div class="text">第二直播间</div>
+                            <div class="location">
+                                <span class="iconfont icon-dingwei local"> 线上直播</span>
+                                <span class="iconfont icon-bofang review">观看回放</span>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <div class="top">
+                                <div class="tag">平行论坛</div>
+                                <div class="tag-date">13:30-18:00</div>
+                            </div>
+                            <div class="text">MSS安全托管运营服务论坛</div>
+                            <div class="location">
+                                <span class="iconfont icon-dingwei local"> 杭州洲际酒店 国际厅1厅</span>
+                                <span class="iconfont icon-bofang review">观看回放</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <!-- 5.5右边内容 -->
+                    <div class="item active">
+                        <div class="right_img">
+                            <img src="../index/images/right5.5.webp" alt="">
+                            <span class="iconfont icon-bofang tubiao"></span>
+                            <span class="iconfont icon-bofang review">观看回放</span>
+                        </div>
+                        <div class="bottom">
+                            <div class="tit">
+                                <h1><span class="text">格致论道@西湖论剑</span></h1>
+                                <p>让“圈外人”关注网络安全，让“冷”科普做到“热”传播</p>
+                            </div>
+                            <div class="btn"><a href="javascript::">+订阅</a></div>
+                        </div>
+                    </div>
+                    <!-- 5.6右边内容 -->
+                    <div class="item">
+                        <div class="right_img">
+                            <img src="../index/images/right5.6.webp" alt="">
+                            <span class="iconfont icon-bofang tubiao"></span>
+                            <span class="iconfont icon-bofang review">观看回放</span>
+                        </div>
+                        <div class="bottom">
+                            <div class="tit">
+                                <h1><span class="text">95后极客青年Talk</span></h1>
+                                <p>西湖论剑·未来已来系列节目 新时代极客青年talk--95后“守门人”的苦辣酸甜</p>
+                            </div>
+                            <div class="btn"><a href="">+订阅</a></div>
+                        </div>
+                    </div>
+                    <!-- 5.7右边内容 -->
+                    <div class="item">
+                        <div class="right_img">
+                            <img src="../index/images/right5.7.webp" alt="">
+                            <span class="iconfont icon-bofang tubiao"></span>
+                            <span class="iconfont icon-bofang review">观看回放</span>
+                        </div>
+                        <div class="bottom">
+                            <div class="tit">
+                                <h1><span class="text">主论坛</span></h1>
+                                <p>数字安全@数字中国 新十年 新起点</p>
+                            </div>
+                            <div class="btn"><a href="">+订阅</a></div>
+                        </div>
+                    </div>
+                    <!-- 5.8右边内容 -->
+                    <div class="item">
+                        <div class="right_img">
+                            <img src="../index/images/right.png" alt="">
+                            <span class="iconfont icon-bofang tubiao"></span>
+                            <span class="iconfont icon-bofang review">观看回放</span>
+                        </div>
+                        <div class="bottom">
+                            <div class="tit">
+                                <h1><span class="text">教育技术产业融合创新发展论坛</span></h1>
+                                <p>多元协同，构建满足产业发展网安人才培养生态</p>
+                            </div>
+                            <div class="btn"><a href="">+订阅</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 大会议程左半边js -->
+    <script>
+        const con_box1 = document.querySelectorAll('.conference .bd .left .box')
+        const con_tag = document.querySelectorAll('.conference .bd .left .box .top .tag')
+        const con_tag_date = document.querySelectorAll('.conference .bd .left .box .top .tag-date')
+        const con_text = document.querySelectorAll('.conference .bd .left .box .text')
+        const con_local = document.querySelectorAll('.conference .bd .left .box .location .local')
+        const con_review = document.querySelectorAll('.conference .bd .left .box .location .review')
+
+        for (let index = 0; index < con_box1.length; index++) {
+            con_box1[index].addEventListener('mouseenter', function () {
+                con_box1[index].style.background = 'url(../index/images/bg_index.jpg)'
+                con_tag[index].style.color = '#fff'
+                con_tag_date[index].style.color = '#fff'
+                con_text[index].style.color = '#fff'
+                con_local[index].style.color = '#fff'
+                con_review[index].style.color = '#fff'
+                con_review[index].style.border = '1px solid #fff'
+            })
+
+
+        }
+
+        for (let i = 0; i < con_box1.length; i++) {
+            con_box1[i].addEventListener('mouseleave', function () {
+                con_box1[i].style.background = '#fff'
+                con_tag[i].style.color = '#333'
+                con_tag_date[i].style.color = '#333'
+                con_text[i].style.color = '#333'
+                con_local[i].style.color = '#333'
+                con_review[i].style.color = '#2dB1BA'
+                con_review[i].style.border = '1px solid #2db1ba'
+            })
+        }
+        const btn = document.querySelector('.conference .bd .right .btn')
+        btn.addEventListener('click',function(){
+            alert('订阅成功')
+        })
+    </script>
+
+    <script>
+        const con_ul = document.querySelector('.conference .hd ul')
+        con_ul.addEventListener('click', function (e) {
+            // console.log(e.target.tagName);
+            if (e.target.tagName === 'A') {
+                //标签颜色变化
+                document.querySelector('.conference .hd .active').classList.remove('active')
+                e.target.classList.add('active')
+                //大盒子模型左边
+                const con_id = +e.target.dataset.id
+                document.querySelector('.conference .bd .left .active').classList.remove('active')
+                document.querySelector(`.conference .bd .left .item:nth-child(${con_id})`).classList.add('active')
+                // 大盒子模型右边
+                document.querySelector('.conference .bd .right .active').classList.remove('active')
+                document.querySelector(`.conference .bd .right .item:nth-child(${con_id})`).classList.add('active')
+            }
+        })
+    </script>
+
+    <!-- 大会亮点 -->
+    <div class="speaker">
+        <div class="wrapper">
+            <div class="highlight">
+                <h1>大会亮点</h1>
+                <span>Conference Highlight</span>
+                <div class="number">
+                    <div class="num">
+                        <span style="font-size: 68px;">500</span><span style="font-size: 24px;">+</span>
+                        <div class="text">主题演讲</div>
+                    </div>
+
+                    <div class="num">
+                        <span style="font-size: 68px;">550</span><span style="font-size: 24px;">+</span>
+                        <div class="text">合作伙伴</div>
+                    </div>
+                    <div class="num">
+                        <span style="font-size: 68px;">10000</span><span style="font-size: 24px;">+</span>
+                        <div class="text">参会嘉宾</div>
+                    </div>
+                    <div class="num">
+                        <span style="font-size: 68px;">10</span><span style="font-size: 24px;">万+</span>
+                        <div class="text">行业从业者</div>
+                    </div>
+                    <div class="num">
+                        <span style="font-size: 68px;">2500</span><span style="font-size: 24px;">万+</span>
+                        <div class="text">直播观看</div>
+                    </div>
+                </div>
+
+                <div class="item_right">
+                    <div class="content">
+                        <h1>议题更前沿</h1>
+                        <span>大会主题及议题、展览锚定数字中国建设要求，助力政企单位从政策、技术、人才、产业等各层面落实工作。</span>
+                        <div class="btn"><a href="">查看详细+</a></div>
+                    </div>
+                    <div class="img_box"></div>
+                </div>
+
+                <div class="item_left">
+                    <div class="content">
+                        <h1>线上更精彩</h1>
+                        <span>“掌上论剑”将进一步丰富内容，增强互动性、趣味性，线上持续精彩。</span>
+                        <div class="btn"><a href="">查看详细+</a></div>
+                    </div>
+                    <div class="img_box"></div>
+                </div>
+
+                <div class="item_right">
+                    <div class="content">
+                        <h1>成果更显著</h1>
+                        <span>将推出国内首份《2023中国数字安全能力洞察报告》，报告涵盖趋势、科技、人才、实践等多部分内容，引领行业发展方向。</span>
+                        <div class="btn"><a href="">查看详细+</a></div>
+                    </div>
+                    <div class="img_box" style="background: url(./images/index_3.jpg) center;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 精彩活动板块 -->
+    <div class="activity">
+        <div class="wrapper">
+            <div class="hd">
+                <h3>精彩活动</h3>
+                <ul>
+                    <li><a href="javascript::" class="active" data-id="1">格致论道</a></li>
+                    <li><a href="javascript::" data-id="2">西湖论剑安全特训营</a></li>
+                    <li><a href="javascript::" data-id="3">新品发布</a></li>
+                    <li><a href="javascript::" data-id="4">第二直播间</a></li>
+                    <li><a href="javascript::" data-id="5">掌上论剑</a></li>
+                    <li><a href="javascript::" data-id="6">西湖论剑十周年回顾 </a></li>
+                </ul>
+                <a href="" class="iconfont icon-youjiantou"></a>
+            </div>
+
+            <div class="bd">
+                <div class="item active">
+                    <div class="text" style="cursor: pointer;">
+                        <h2>格致论道</h2>
+                        <h1>让“圈外人”关注网络安全，让“冷”科普做到“热”传播</h1>
+                        <div class="text_2">5月5日 18:30
+                            “格致论道”是中国科学院计算机网络信息中心和中国科学院科学传播局联合主办的科学文化讲坛。致力于非凡思想的跨界交流，提倡以"格物致知"的精神探讨科技、教育、生活、未来的发展。</div>
+                        <a href="javascript::" class="link_btn">+订阅</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="text" style="cursor: pointer;">
+                        <h2>西湖论剑安全特训营</h2>
+                        <h1>数字安全人才助推器</h1>
+                        <div class="text_2">5月4-6日
+                            西湖论剑安全特训营是国内领先的数字安全人才交流、孵化及实训平台，致力于成为数字时代的“数字安全人才助推器”。以体系化课程、实战化导向为显著特色，服务于数字化转型背景下的政府、企事业单位，为其培养数字安全的管理者、实战人才提供有力支撑，为国家数字安全人才发展持续输出强有力的“燃料”。
+                        </div>
+                        <a href="" class="link_btn">+订阅</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="text">
+                        <h2></h2>
+                        <h1>新品发布</h1>
+                        <div class="text_2"></div>
+                        <a href="" class="link_btn">+订阅</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="text">
+                        <h2>第二直播间</h2>
+                        <h1>创新内容形式,立体化开展宣传</h1>
+                        <div class="text_2">一次掌上场景搭建下的即时性交流；身临其境的参与感，精彩看点的抢先看；行业专家、观点嘉宾在线解读核心观点；更有大会成果密集输出，限定款宠粉福利</div>
+                        <a href="" class="link_btn">+订阅</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="text">
+                        <h2>掌上论剑</h2>
+                        <h1>线下“精致”、线上“亮眼”</h1>
+                        <div class="text_2">以西湖论剑官网为载体，精心策划“掌上论剑”系列活动，推出“点亮网安，守护城市”、“
+                            守护每一份网安愿景”等互动活动，《今夜不破防》、《十日谈》、《新时代安全观对话》等亮点节目，打造一档精彩、有趣的掌上论剑特色节目。</div>
+                        <a href="" class="link_btn">+订阅</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="text">
+                        <h2>格致论道</h2>
+                        <h1>让“圈外人”关注网络安全，让“冷”科普做到“热”传播</h1>
+                        <div class="text_2">5月5日 18:30
+                            “格致论道”是中国科学院计算机网络信息中心和中国科学院科学传播局联合主办的科学文化讲坛。致力于非凡思想的跨界交流，提倡以"格物致知"的精神探讨科技、教育、生活、未来的发展。</div>
+                        <a href="" class="link_btn">+订阅</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 精彩活动tab栏切换js -->
+    <script>
+        const act_img = [
+            { url: '../index/images/act1.jpg' },
+            { url: '../index/images/act2.webp' }
+        ]
+        const act_bg = document.querySelector('.activity')
+        const act_ul = document.querySelector('.activity .hd ul')
+        act_ul.addEventListener('click', function (e) {
+            if (e.target.tagName === 'A') {
+                // 标签变色
+                document.querySelector('.activity .hd .active').classList.remove('active')
+                e.target.classList.add('active')
+                const act_id = +e.target.dataset.id
+                // 文字变化
+                document.querySelector('.activity .bd .active').classList.remove('active')
+                document.querySelector(`.activity .bd .item:nth-child(${act_id})`).classList.add('active')
+                act_bg.style.backgroundImage = `url(../index/images/act${act_id}.jpg)`
+            }
+        })
+        const link_btn = document.querySelector('.activity .bd .link_btn')
+        link_btn.addEventListener('click',function(){
+            alert('订阅成功')
+        })
+    </script>
+
+    <!-- 嘉宾板块 -->
+
+    <!-- 嘉宾 -->
+    <div class="guest">
+        <div class="wrapper">
+            <div class="top">
+                <h1>重磅嘉宾</h1>
+                <span>Important Guests</span>
+            </div>
+            <div class="swiper mySwiper ">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="../index/images/guest01.webp" />
+                        <div class="bottom">
+                            <h1>邬贺铨 </h1>
+                            <span>中国工程院院士</span>
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../index/images/guest02.webp" />
+                        <div class="bottom">
+                            <h1>方滨兴 </h1>
+                            <span>中国工程院院士</span>
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../index/images/guest03.webp" />
+                        <div class="bottom">
+                            <h1>郝志强 </h1>
+                            <span>工业和信息化部教育与考试中心主任、书记</span>
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../index/images/guest04.webp" />
+                        <div class="bottom">
+                            <h1>柯皓仁 </h1>
+                            <span>中国信通院安全研究所车联网安全中心任
+                            </span>
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../index/images/guest05.webp" />
+                        <div class="bottom">
+                            <h1>左晓栋 </h1>
+                            <span>国科学技术大学网络空间安全学院教授科技人
+                                文高等研究院副院长
+                            </span>
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../index/images/guest06.webp" />
+                        <div class="bottom">
+                            <h1>谭晓生 </h1>
+                            <span>北京赛博英杰科技有限公司董事张
+                            </span>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="btn"><a href="">更多嘉宾</a></div>
+                <!-- <div class="swiper-pagination"></div> -->
+            </div>
+
+        </div>
+        <!--     -->
+    </div>
+    <!-- 嘉宾js -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    </script>
+
+
+    <!-- 新闻 -->
+    <div class="new">
+        <div class="wrapper">
+            <div class="top">
+
+                <h1>新闻资讯</h1>
+                <p>New Report</p>
+
+            </div>
+            <div class="content">
+                <div class="left">
+                    <h1><a href="">【重磅干货】大家都关心的嘉宾ppt下载指南来啦！</a></h1>
+                    <span class="link_btn">西湖论剑</span> <span class="data">2023-05-12</span>
+                    <p>指路贴来啦！大家都关心的嘉宾PPT下载指南在这里！一图解锁西湖论剑官网&小程序下载路径，看众多专家真知灼见，干货满满 ，引领行业思辨！</p>
+                </div>
+                <div class="right"><img src="../index/images/新闻资讯.jpg" alt=""></div>
+            </div>
+            <div class="bottom">
+                <ul>
+                    <li><a href="">
+                            <div class="title">2023西湖论剑·数字安全大会举办</div>
+                            <p>央广网杭州5月8日消息(记者 姜頔)自山下而仰山巅谓之高远，自山前而窥山后谓之深远，自近山而望远山谓之平远。5月7...</p>
+                            <span class="link_btn">央广网</span> <span class="data">2023-05-08</span>
+                        </a></li>
+                    <li><a href="">
+                            <div class="title">2023西湖论剑·数字安全大会在杭...</div>
+                            <p>央广网杭州5月8日消息(记者 姜頔)自山下而仰山巅谓之高远，自山前而窥山后谓之深远，自近山而望远山谓之平远。5月7...</p>
+                            <span class="link_btn">央广网</span> <span class="data">2023-05-08</span>
+                        </a></li>
+                    <li><a href="">
+                            <div class="title">西湖论剑暨安恒信息年度新品发布...</div>
+                            <p>人民网杭州4月19日电 （叶宾得）今天，西湖论剑暨安恒信息首次年度新品发布会在杭州举行，发布会以“新·见未来 实·现...</p>
+                            <span class="link_btn">人民网</span> <span class="data">2023-04-19</span>
+                        </a></li>
+                </ul>
+                <div class="btn"><a href="">更多新闻</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 精彩瞬间 -->
+    <div class="wonderful">
+        <div class="wrapper">
+            <div class="hd">
+                <h3>精彩活动</h3>
+                <ul>
+                    <li><a href=""><span class="iconfont icon-shipin"></span>精彩图片</a></li>
+                    <li><a href=""><span class="iconfont icon-tupian"></span>精彩视频</a></li>
+                </ul>
+                <a href="" class="iconfont icon-youjiantou"></a>
+            </div>
+            <div class="bd">
+                <div class="left">
+                    <a href=""><img src="../index/images/wonderfu01.jpg" alt=""></a>
+                    <h1>数字安全@数字中国主论坛-精彩瞬间</h1>
+                </div>
+
+                <div class="right">
+                    <a href=""><img src="../index/images/wonderf02.jpg" alt=""></a>
+                    <a href=""><img src="../index/images/wonderful03.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 合作商 -->
+    <div class="partner">
+        <div class="wrapper">
+            <div class="top">
+                <span class="active">生态合作伙伴</span>
+                <span>战略合作伙伴</span>
+                <span>新闻媒体</span>
+            </div>
+            <div class="bottom">
+                <ul>
+                    <li><a href=""><img src="../index/images/p01.png" alt=""></a></li>
+                    <li><a href=""><img src="../index/images/p02.webp" alt=""></a></li>
+                    <li><a href=""><img src="../index/images/p03.webp" alt=""></a></li>
+                    <li><a href=""><img src="../index/images/p05.webp" alt=""></a></li>
+                    <li><a href=""><img src="../index/images/p04.png" alt=""></a></li>
+                </ul>
+
+                <ol>
+                    <li><a href=""><img src="../index/images/p06.webp" alt=""></a></li>
+                    <li><a href=""><img src="../index/images/p07.webp" alt=""></a></li>
+                    <li><a href=""><img src="../index/images/p08.webp" alt=""></a></li>
+                    <li><a href=""><img src="../index/images/p09.webp" alt=""></a></li>
+                </ol>
+
+                <ul>
+                    <li><a href=""><img src="../index/images/p10.webp" alt=""></a></li>
+                    <li><a href=""><img src="../index/images/p11.webp" alt=""></a></li>
+                    <li><a href=""><img src="../index/images/p12.webp" alt=""></a></li>
+                    <li><a href=""><img src="../index/images/p13.png" alt=""></a></li>
+                    <li><a href=""><img src="../index/images/p14.webp" alt=""></a></li>
+                </ul>
+
+                <ol>
+                    <li><a href=""><img src="../index/images/p15.png" alt=""></a></li>
+                    <li><a href=""><img src="../index/images/p16.webp" alt=""></a></li>
+                    <li><a href=""><img src="../index/images/p17.webp" alt=""></a></li>
+                    <li><a href=""><img src="../index/images/p18.webp" alt=""></a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <!-- 亚丝娜live2d -->
+    <!-- <div  hidden style="width:70%; height:46px; bottom:0; position:fixed;background-color: grey; line-height:46px; color:aliceblue; text-align: center;">
+        
+    </div>
+
+    <script>
+      L2Dwidget.init({
+        model: { jsonPath: "../html/Asuna_live2d-master/asuna_04.model.json" }
+      });
+    </script> -->
+    <!-- 版权底部 -->
+    <div class="footer">
+        <div class="wrapper">
+            <div class="top">
+                <div class="row">
+                    <h1>指导单位</h1>
+                    <ul>
+                        <li>浙江省互联网信息办公室</li>
+                        <li>浙江省经济和信息化厅</li>
+                        <li>浙江省公安厅</li>
+                        <li>浙江省发展和改革委员会</li>
+                        <li>浙江省通信管理局</li>
+                    </ul>
+                </div>
+
+                <div class="row">
+                    <h1>主办单位</h1>
+                    <ul>
+                        <li>杭州市人民政府</li>
+
+                    </ul>
+                </div>
+
+                <div class="row">
+                    <h1>联合主办单位</h1>
+                    <ul>
+                        <li>中国信息通信研究院</li>
+                        <li>中国网络空间研究院</li>
+                        <li>国家工业信息安全发展研究中心</li>
+                        <li>中国电子技术标准化研究院</li>
+                        <li>工业和信息化部教育与考试中心</li>
+                        <li>杭州市滨江区人民政府</li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <h1>承办单位</h1>
+                    <ul>
+                        <li>杭州市互联网信息办公室</li>
+                        <li>杭州市经济和信息化局</li>
+                        <li>杭州市公安局</li>
+                        <li>杭州市发展和改革委员会</li>
+                        <li>浙江省网络空间安全协会</li>
+                        <li>安恒信息</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="row">
+                    <h1>指导单位</h1>
+                    <ul>
+                        <li>浙江省互联网信息办公室</li>
+                        <li>浙江省经济和信息化厅</li>
+                        <li>浙江省公安厅</li>
+                        <li>浙江省发展和改革委员会</li>
+                        <li>浙江省通信管理局</li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <h1>指导单位</h1>
+                    <ul>
+                        <li>浙江省互联网信息办公室</li>
+                        <li>浙江省经济和信息化厅</li>
+                        <li>浙江省公安厅</li>
+                        <li>浙江省发展和改革委员会</li>
+                        <li>浙江省通信管理局</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="left">
+                    <img src="../index/images/logo_bottom.png" alt="">
+                    <h1>隐私条款 / 服务条款</h1>
+                    <h1>技术支持：代码写的都很队</h1>
+                </div>
+                <div class="middle">
+                    <ul>
+                        <li><a href="">首页</a></li>
+                        <li><a href="">大会议程</a></li>
+                        <li><a href="">关于大会</a></li>
+                        <li><a href="">大咖云集</a></li>
+                        <li><a href="">精彩活动</a></li>
+                        <li><a href="">展商风采</a></li>
+                        <li><a href="">成果发布</a></li>
+                        <li><a href="">媒体中心</a></li>
+                        <li><a href="">参会指南</a></li>
+                        <li><a href="">大会直播</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="right">
+                    <img src="../index/images/二维码小程序.webp" alt="">
+                    <h1>扫码进入小程序</h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 电梯导航 -->
+    <div class="elevator">
+        <ul>
+            <li class="post"><a href="#open-modal">
+                    <i class="iconfont icon-JC_054"></i>
+                    <p>海报合成</p>
+                </a></li>
+            <li><a href="../raffle/raffle.html">
+                    <i class="iconfont icon-choujiang"></i>
+                    <p>积分抽奖</p>
+                </a></li>
+                <li><a href="../game/game.html">
+                    <i class="iconfont icon-youxi"></i>
+                    <p>问答游戏</p>
+                </a></li>   
+            <li id="toConference"><a href="javascript:;">
+                    <i class="iconfont icon-dahuiyuan"></i>
+                    <p>大会相关</p>
+                </a></li>
+            <li id="toActivity"><a href="javascript:;">
+                    <i class="iconfont icon-huodong"></i>
+                    <p>精彩活动</p>
+                </a></li>
+            <li id="toNew"><a href="javascript:;">
+                    <i class="iconfont icon-xinwen_o"></i>
+                    <p>新闻资讯</p>
+                </a></li>
+            <li id="backTop"><a href="javascript:;">
+                    <i class="iconfont icon-fanhuidingbu"></i>
+                    <p>返回顶部</p>
+                </a></li>
+        </ul>
+    </div>
+
+    <div id="open-modal" class="modal-window">
+        <!-- 这里是弹框的主体部分 -->
+        <div>
+            <!-- 关闭按钮 -->
+            <a href="javascript:;" class="modal-close iconfont icon-guanbi"></a>
+            <!-- 模态框标题 -->
+            
+            <img src="./images/post.jpg" alt="" class="postImg" style="width: 300px; height: 500px; margin: 0 auto;">
+           <h3>分享海报</h3>
+        </div>
+    </div>
+
+    <script>
+        const elevator = document.querySelector('.elevator')
+
+        window.addEventListener('scroll',function (){
+            const n = document.documentElement.scrollTop
+            elevator.style.opacity = n>=550 ? 1 : 0
+        })
+
+        const backTop = document.querySelector('#backTop')
+        backTop.addEventListener('click',function () {
+            document.documentElement.scrollTop = 0
+            
+        })
+
+        const toConference = document.querySelector('#toConference')
+        toConference.addEventListener('click',function () {
+            document.documentElement.scrollTop = 850
+        })
+
+        const toActivity = document.querySelector('#toActivity')
+        toActivity.addEventListener('click',function () {
+            document.documentElement.scrollTop = 3000 
+        })
+
+        const toNew = document.querySelector('#toNew')
+        toNew.addEventListener('click',function () {
+            document.documentElement.scrollTop = 4500
+        })
+
+        const post = document.querySelector('.post')
+        const close = document.querySelector('.modal-close')
+        const modal = document.querySelector('.modal-window')
+        post.addEventListener('click',function () {
+            modal.classList.add('active')
+        })
+
+        close.addEventListener('click',function () {
+            modal.classList.remove('active')
+        })
+
+    </script>
+
+    <!-- waifu-tips.js 依赖 JQuery 库 -->
+    <script src="assets/jquery.min.js?v=3.3.1"></script>
+
+    <script src="assets/autoload.js?v=1.4.2"></script>
+</body>
+
+</html>
