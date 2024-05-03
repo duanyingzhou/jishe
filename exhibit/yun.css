@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header .nav ul li #exhibit {
+    color: #005aad;
+}
+
+:root {
+    --perspective-distance: 600px;
+    --cube-size: 1000px;
+    --cube-z-distance: var(--perspective-distance);
+    --cube-item-z-distance: calc(var(--cube-size) / 2 - 1px);
+}
+
+.scene {
+    perspective: var(--perspective-distance);
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.cube-z {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: translateZ(var(--cube-z-distance));
+}
+
+.cube {
+    position: relative;
+    transform-style: preserve-3d;
+    left: 50%;
+    top: 50%;
+    width: var(--cube-size);
+    height: var(--cube-size);
+    margin-left: calc(-1 * var(--cube-size) / 2);
+    margin-top: calc(-1 * var(--cube-size) / 2);
+}
+
+.cube-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+}
+
+.cube-item-pz {
+    transform: rotateY(-0deg) translateZ(calc(-1 * var(--cube-item-z-distance)));
+}
+
+.cube-item-px {
+    transform: rotateY(-90deg) translateZ(calc(-1 * var(--cube-item-z-distance)));
+}
+
+.cube-item-nz {
+    transform: rotateY(-180deg) translateZ(calc(-1 * var(--cube-item-z-distance)));
+}
+
+.cube-item-nx {
+    transform: rotateY(90deg) translateZ(calc(-1 * var(--cube-item-z-distance)));
+}
+
+.cube-item-py {
+    transform: rotateX(-90deg) translateZ(calc(-1 * var(--cube-item-z-distance)));
+}
+
+.cube-item-ny {
+    transform: rotateX(90deg) translateZ(calc(-1 * var(--cube-item-z-distance)));
+}
+
+.zoom {
+    background: rgba(255, 255, 255, .5);
+    position: fixed;
+    bottom: 2.5em;
+    right: 2.5em;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    width: 2.5em;
+    padding: 0.1em;
+}
+
+.zoom-plus,
+.zoom-minus {
+    width: 100%;
+    height: 100%;
+}
+
+.list {
+    width: 1528px;
+    height: 128px;
+    background: rgba(255, 255, 255, .5);
+    position: fixed;
+    bottom: 140px;
+    opacity: 0;
+    transition: all 0.3s;
+    border-radius: 5px;
+}
+
+.active {
+    opacity: 1;
+}
+
+.list .wrapper {
+    margin-left: 400px;
+    display: flex;
+}
+
+.list .wrapper .mes {
+    width: 85px;
+    margin-left: 40px;
+}
+
+.list a {
+    text-decoration: none;
+    color: black;
+}
+
+.list p {
+    margin-top: 10px;
+    text-align: center;
+    color: #fff;
+    background-color: #333;
+}
+
+.list img {
+    width: 86px;
+    height: 86px;
+}
+
+.btn a {
+    /*   */
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    position: fixed;
+    bottom: 4em;
+    left: 2.5em;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    width: 60px;
+    height: 60px;
+    padding: 0.1em;
+}
+
+.btn p {
+    width: 100px;
+}
+
+.scene .cube-z .cube .cube-item a img{
+    width: 60px;
+    height: 60px;
+}
+
+
+.scene .cube-z .cube .cube-item .img1{
+    position: absolute;
+    left: 25%;
+    top: 25%;
+}
+
+.scene .cube-z .cube .cube-item .img2{
+    position: absolute;
+    left: 15%;
+    top: 40%;
+}
+
+.scene .cube-z .cube .cube-item .img3{
+    position: absolute;
+    left: 25%;
+    top: 15%;
+}
+
+.scene .cube-z .cube .cube-item .img4{
+    position: absolute;
+    left: 25%;
+    top: 30%;
+}
+
+/* 模态窗口 */
+/* 模态框 背景 初始化样式 */
+.modal-window {
+    /* 固定定位 */
+    position: fixed;
+    /* 实现满屏 */
+    top     : 0;
+    left    : 0;
+    right   : 0;
+    bottom  : 0;
+
+    /* 半透明的背景 */
+    background-color: rgba(0, 0, 0, 0.5);
+
+    z-index: 9999;
+
+    /* 初始化时让它隐藏 */
+    visibility    : hidden;
+    opacity       : 0;
+    /* 不响应鼠标事件 */
+    pointer-events: none;
+
+    /* 让主体部分居中对齐 */
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+
+}
+
+.modal-window img{
+    width: 400px;
+    
+}
+
+/* 模态框 背景 弹出样式 */
+.modal-window:target {
+    visibility    : visible;
+    opacity       : 1;
+    pointer-events: auto;
+}
+
+/* 模态框主体部分 */
+.modal-window>div {
+    position: relative;
+    width  : 400px;
+    padding: 2em;
+
+    border-radius: 10px;
+
+    background-color: #fff;
+}
+
+/* 模态框 关闭 */
+.modal-close {
+    position: absolute;
+
+    right: 30px;
+    top  : 20px;
+
+    color          : #aaa;
+    text-decoration: none;
+}
+
+.modal-close:hover {
+    color: #333;
+}
+
+
+/* 模态框 标题 */
+.modal-title {
+    color    : #00b894;
+    font-size: 30px;
+    padding  : 15px 0;
+}
+
+/* 模态框正文 */
+.modal-body {
+    font-size: 18px;
+    margin   : 15px 0;
+}
+
+.shouye .iconfont{
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    font-size: 32px;
+    color: #333;
+  }
+  
+  .shouye .iconfont:hover{
+    color: black;
+  }
+  

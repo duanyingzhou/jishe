@@ -1,0 +1,201 @@
+.main-content {
+    width: 100%;
+}
+
+.title {
+    margin: 20px 30px;
+}
+
+.image-list {
+    width: 100%;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+.image-list .cover {
+    position: relative;
+    width: 160px;
+    height: 230px;
+    display: inline-block;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.image-list .cover img {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
+/*main CSS*/
+
+#pictureViewer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 10000;
+}
+
+#pictureViewer>.content {
+    position: absolute;
+    width: 1080px;
+    height: 610px;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#pictureViewer .menu-bar {
+    width: 100%;
+    padding: 0 50px;
+}
+
+#pictureViewer .menu-bar .handel {
+    height: 40px;
+    float: right;
+    cursor: pointer;
+}
+
+#pictureViewer .menu-bar .handel:hover {
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+#pictureViewer .menu-bar .handel.close-view {
+    color: #fff;
+    display: flex;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+#pictureViewer .menu-bar .handel.close-view span {
+    font-size: 16px !important;
+    margin-right: 10px;
+    transition: all .3s;
+}
+
+#pictureViewer .menu-bar .handel.close-view:hover span.ax-iconfont {
+    transform: rotate(360deg);
+}
+
+#pictureViewer .handel-prev,
+#pictureViewer .handel-next {
+    display: inline-block;
+    width: 50px;
+    height: 70px;
+    font-size: 40px;
+    color: #fff;
+    position: relative;
+    top: calc(50% - 50px);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 50%;
+    cursor: pointer;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+#pictureViewer .handel-prev {
+    transform: rotate(-180deg);
+    margin-left: -50px;
+}
+
+#pictureViewer .handel-prev:hover {
+    color: #59afb8;
+}
+
+#pictureViewer .handel-next:hover {
+    color: #59afb8;
+}
+
+#pictureViewer .picture-content {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+#pictureViewer .picture-content .cover {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#pictureViewer .counter {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    height: 40px;
+    line-height: 40px;
+    width: 55px;
+    text-align: left;
+    color: #fff;
+    font-size: 13px;
+}
+
+#pictureViewer .num {
+    font-size: 20px;
+}
+
+#pictureViewer .total {
+    font-size: 16px;
+}
+
+#pictureViewer .hide {
+    display: none;
+}
+
+#pictureViewer .left {
+    float: left;
+    z-index: 12;
+}
+
+#pictureViewer .right {
+    float: right;
+    margin-right: -50px;
+}
+
+#pictureViewer .clear-flex {
+    clear: both;
+}
+
+#pictureViewer img {
+    width: 1040px;
+    height: 585px;
+}
+
+#pictureViewer h1 {
+    position: absolute;
+    margin: auto;
+    /* top: 0; */
+    right: 0;
+    bottom: 50px;
+    left: 0;
+    z-index: 2;
+    color: #fff;
+    left: 50px;
+    font-size: 3rem;
+}

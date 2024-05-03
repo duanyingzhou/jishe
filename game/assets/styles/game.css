@@ -1,0 +1,536 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #FFFC00;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.logo {
+  display: inline-block;
+  height: 64px;
+  width: 64px;
+  position: fixed;
+  left: 24px;
+  bottom: 24px;
+  background: url('../images/logo.png') no-repeat center;
+  background-size: 100% 100%;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+}
+.logo:hover {
+  transform: rotate(360deg);
+}
+.title {
+  font-size: 45px;
+  position: fixed;
+  top: 0;
+  color: #FFFFFF;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .25), 2px 2px 2px rgba(0, 0, 0, .3);
+  text-align: center;
+  width: 100%;
+}
+.title::before {
+  display: inline-block;
+  content: '';
+  width: 49px;
+  height: 36px;
+  background: url('../images/arrow.png') no-repeat center;
+  background-size: 100% 100%;
+  vertical-align: middle;
+  margin-right: 24px;
+  animation: bounceLeft 5s ease-in-out infinite;
+  animation-fill-mode: both;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, .25));
+}
+.title::after {
+  display: inline-block;
+  content: '';
+  width: 49px;
+  height: 35.9px;
+  background: url('../images/arrow.png') no-repeat center;
+  background-size: 100% 100%;
+  vertical-align: middle;
+  margin-left: 36px;
+  animation: bounceRight 5s ease-in-out infinite;
+  animation-fill-mode: both;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, .25));
+}
+@keyframes bounceLeft {
+  0% {
+    transform: translateX(0)
+  }
+  50% {
+    transform: translateX(-20px)
+  }
+  100% {
+    transform: translateX(0)
+  }
+}
+@keyframes bounceRight {
+  0% {
+    transform: rotate(180deg) translateX(20px)
+  }
+  50% {
+    transform: rotate(180deg) translateX(0)
+  }
+  100% {
+    transform: rotate(180deg) translateX(20px)
+  }
+}
+.mask {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, .25);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.mask .modal {
+  width: 52%;
+  background: rgba(255, 255, 255, .5);
+  filter: drop-shadow(1px 1px 55px rgba(0, 0, 0, .25));
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 16px;
+  margin: 0 auto;
+  border: 1px groove #EFEFEF;
+}
+.mask .modal p {
+  font-size: 14px;
+  color: #000000;
+  line-height: 2;
+  text-align: justify;
+  text-align-last: left;
+  word-break: break-all;
+}
+.mask .modal p b {
+  color: #FFFC00;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, .25);
+  font-weight: normal;
+}
+.mask .modal button {
+  -webkit-appearance: none;
+  height: 36px;
+  width: 120px;
+  background: #FFFC00;
+  outline: none;
+  border: none;
+  border-radius: 36px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+}
+.mask .modal button:hover {
+  background: #dee758cc;
+}
+
+/* 模态窗口 */
+
+
+/* 模态框 背景 初始化样式 */
+.modal-window {
+  /* 固定定位 */
+  position: fixed;
+  /* 实现满屏 */
+  top     : 0;
+  left    : 0;
+  right   : 0;
+  bottom  : 0;
+
+  /* 半透明的背景 */
+  background-color: rgba(0, 0, 0, 0.5);
+
+  z-index: 9999;
+
+  /* 初始化时让它隐藏 */
+  visibility    : hidden;
+  opacity       : 0;
+  /* 不响应鼠标事件 */
+  pointer-events: none;
+
+  /* 让主体部分居中对齐 */
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+
+}
+
+/* 模态框 背景 弹出样式 */
+.modal-window:target {
+  visibility    : visible;
+  opacity       : 1;
+  pointer-events: auto;
+}
+
+/* 模态框主体部分 */
+.modal-window>div {
+  position: relative;
+  width  : 600px;
+  padding: 2em;
+
+  border-radius: 10px;
+
+  background-color: #fff;
+}
+
+/* 模态框 关闭 */
+.modal-close {
+  position: absolute;
+
+  right: 30px;
+  top  : 20px;
+
+  color          : #aaa;
+  text-decoration: none;
+}
+
+.modal-close:hover {
+  color: #333;
+}
+
+
+/* 模态框 标题 */
+.modal-title {
+  color    : #00b894;
+  font-size: 30px;
+  padding  : 15px 0;
+}
+
+/* 模态框正文 */
+.modal-body {
+  font-size: 18px;
+  margin   : 15px 0;
+}
+
+.modal-check{
+    padding: 0 1rem;
+    height: 2.5rem;
+    margin: 20px auto;
+    width: 400px;
+    color: #000000;
+    /* text-align: center; */
+    border-radius: 5rem;
+    line-height: 2.5rem;
+    background: #fff;
+    font-size: 14px;
+    border: 1px solid #2dB1BA;
+    transition: all .2s ease-in;
+
+}
+
+.modal-check:hover{
+  background-color: #C0C0C0;
+}
+
+.modal-check  .iconfont{
+  margin-left: 20px;
+  opacity: 0;
+}
+
+/* 第二个答题 */
+/* 模态框 背景 初始化样式 */
+.modal-window2 {
+  /* 固定定位 */
+  position: fixed;
+  /* 实现满屏 */
+  top     : 0;
+  left    : 0;
+  right   : 0;
+  bottom  : 0;
+
+  /* 半透明的背景 */
+  background-color: rgba(0, 0, 0, 0.5);
+
+  z-index: 9999;
+
+  /* 初始化时让它隐藏 */
+  visibility    : hidden;
+  opacity       : 0;
+  /* 不响应鼠标事件 */
+  pointer-events: none;
+
+  /* 让主体部分居中对齐 */
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+
+}
+
+
+/* 模态框主体部分 */
+.modal-window2>div {
+  position: relative;
+  width  : 600px;
+  padding: 2em;
+
+  border-radius: 10px;
+
+  background-color: #fff;
+}
+
+/* 模态框 关闭 */
+.modal-close2 {
+  position: absolute;
+
+  right: 30px;
+  top  : 20px;
+
+  color          : #aaa;
+  text-decoration: none;
+}
+
+.modal-close2:hover {
+  color: #333;
+}
+
+
+/* 模态框 标题 */
+.modal-title2 {
+  color    : #00b894;
+  font-size: 30px;
+  padding  : 15px 0;
+}
+
+/* 模态框正文 */
+.modal-body2 {
+  font-size: 18px;
+  margin   : 15px 0;
+}
+
+.modal-check2{
+    padding: 0 1rem;
+    height: 2.5rem;
+    margin: 20px auto;
+    width: 400px;
+    color: #000000;
+    /* text-align: center; */
+    border-radius: 5rem;
+    line-height: 2.5rem;
+    background: #fff;
+    font-size: 14px;
+    border: 1px solid #2dB1BA;
+    transition: all .2s ease-in;
+
+}
+
+.modal-check2:hover{
+  background-color: #C0C0C0;
+}
+
+.modal-check2  .iconfont{
+  margin-left: 20px;
+  opacity: 0;
+}
+
+/* 第3个答题 */
+/* 模态框 背景 初始化样式 */
+.modal-window3 {
+  /* 固定定位 */
+  position: fixed;
+  /* 实现满屏 */
+  top     : 0;
+  left    : 0;
+  right   : 0;
+  bottom  : 0;
+
+  /* 半透明的背景 */
+  background-color: rgba(0, 0, 0, 0.5);
+
+  z-index: 9999;
+
+  /* 初始化时让它隐藏 */
+  visibility    : hidden;
+  opacity       : 0;
+  /* 不响应鼠标事件 */
+  pointer-events: none;
+
+  /* 让主体部分居中对齐 */
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+
+}
+
+
+/* 模态框主体部分 */
+.modal-window3>div {
+  position: relative;
+  width  : 600px;
+  padding: 2em;
+
+  border-radius: 10px;
+
+  background-color: #fff;
+}
+
+/* 模态框 关闭 */
+.modal-close3 {
+  position: absolute;
+
+  right: 30px;
+  top  : 20px;
+
+  color          : #aaa;
+  text-decoration: none;
+}
+
+.modal-close3:hover {
+  color: #333;
+}
+
+
+/* 模态框 标题 */
+.modal-title3 {
+  color    : #00b894;
+  font-size: 30px;
+  padding  : 15px 0;
+}
+
+/* 模态框正文 */
+.modal-body3 {
+  font-size: 18px;
+  margin   : 15px 0;
+}
+
+.modal-check3{
+    padding: 0 1rem;
+    height: 2.5rem;
+    margin: 20px auto;
+    width: 400px;
+    color: #000000;
+    /* text-align: center; */
+    border-radius: 5rem;
+    line-height: 2.5rem;
+    background: #fff;
+    font-size: 14px;
+    border: 1px solid #2dB1BA;
+    transition: all .2s ease-in;
+
+}
+
+.modal-check3:hover{
+  background-color: #C0C0C0;
+}
+
+.modal-check3  .iconfont{
+  margin-left: 20px;
+  opacity: 0;
+}
+
+/* 第4个答题 */
+/* 模态框 背景 初始化样式 */
+.modal-window4 {
+  /* 固定定位 */
+  position: fixed;
+  /* 实现满屏 */
+  top     : 0;
+  left    : 0;
+  right   : 0;
+  bottom  : 0;
+
+  /* 半透明的背景 */
+  background-color: rgba(0, 0, 0, 0.5);
+
+  z-index: 9999;
+
+  /* 初始化时让它隐藏 */
+  visibility    : hidden;
+  opacity       : 0;
+  /* 不响应鼠标事件 */
+  pointer-events: none;
+
+  /* 让主体部分居中对齐 */
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+
+}
+
+
+/* 模态框主体部分 */
+.modal-window4>div {
+  position: relative;
+  width  : 600px;
+  padding: 2em;
+
+  border-radius: 10px;
+
+  background-color: #fff;
+}
+
+/* 模态框 关闭 */
+.modal-close4 {
+  position: absolute;
+
+  right: 30px;
+  top  : 20px;
+
+  color          : #aaa;
+  text-decoration: none;
+}
+
+.modal-close4:hover {
+  color: #333;
+}
+
+
+/* 模态框 标题 */
+.modal-title4 {
+  color    : #00b894;
+  font-size: 30px;
+  padding  : 15px 0;
+}
+
+/* 模态框正文 */
+.modal-body4 {
+  font-size: 18px;
+  margin   : 15px 0;
+}
+
+.modal-check4{
+    padding: 0 1rem;
+    height: 2.5rem;
+    margin: 20px auto;
+    width: 400px;
+    color: #000000;
+    /* text-align: center; */
+    border-radius: 5rem;
+    line-height: 2.5rem;
+    background: #fff;
+    font-size: 14px;
+    border: 1px solid #2dB1BA;
+    transition: all .2s ease-in;
+
+}
+
+.modal-check4:hover{
+  background-color: #C0C0C0;
+}
+
+.modal-check4  .iconfont{
+  margin-left: 20px;
+  opacity: 0;
+}
+
+.shouye .iconfont{
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  font-size: 32px;
+  color: #333;
+}
+
+.shouye .iconfont:hover{
+  color: black;
+}

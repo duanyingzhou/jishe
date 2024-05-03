@@ -1,0 +1,149 @@
+.header .nav ul li #exhibit {
+    color: #005aad;
+}
+
+.exhibit_top {
+    height: 1002px;
+    background: url(./images/bg.webp);
+    text-align: center;
+    padding-top: 80px;
+}
+
+.exhibit_top h1 {
+    font-size: 44px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 80px;
+}
+
+.exhibit_top video {
+    width: 1040px;
+    height: 585px;
+}
+
+.partner {
+    margin-bottom: 80px;
+}
+
+.partner .top {
+    margin: 60px;
+    text-align: center;
+}
+
+.partner .top span {
+    font-size: 26px;
+    margin: 0px 40px;
+    color: #333;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.partner .top .active {
+    color: #2dB1BA;
+    border-bottom: 2px solid #2dB1BA;
+    border-color: #2dB1BA;
+}
+
+.partner .bottom {
+    margin-top: 80px;
+}
+
+.partner .bottom ul {
+    display: flex;
+    margin: 20px 0px;
+}
+
+.partner .bottom img {
+    width: 140px;
+    height: 140px;
+    transition: all 0.3s ease-out;
+}
+
+.partner .bottom img:hover {
+    transform: scale(1.2);
+}
+
+.partner .bottom ul li {
+    margin-right: 120px;
+}
+
+.partner .bottom ul li:last-child {
+    margin-right: 0px;
+}
+
+.partner .bottom ol {
+    display: flex;
+}
+
+.partner .bottom ol li:first-child {
+    margin-left: 150px;
+}
+
+.partner .bottom ol li {
+    margin-right: 120px;
+}
+
+.exhibit_bottom .wrapper {
+    height: 1000px;
+}
+
+.exhibit_bottom .wrapper h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2dB1BA;
+    padding-left: 20px;
+    border-left: 2px solid #2dB1BA;
+}
+
+.exhibit_bottom .wrapper .exb {
+    display: flex;
+    height: 207px;
+    margin-bottom: 40px;
+}
+
+.exb .left img {
+    width: 338px;
+    height: 220px;
+}
+
+.exb .right {
+    padding-left: 20px;
+}
+
+.exb .right h1 {
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+    padding: 0px;
+    border: 0px;
+    margin-bottom: 20px;
+}
+
+.exb .right p {
+    margin-bottom: 40px;
+    opacity: .8;
+    width: 820px;
+}
+
+.exb .right .btn {
+    display: flex;
+}
+
+.exb .right .btn span {
+    font-size: 14px;
+    display: block;
+    width: 100px;
+    line-height: 30px;
+    text-align: center;
+    background: #fff;
+    color: #00b4bc;
+    border-radius: 2rem;
+    margin-right: 20px;
+    border: 1px solid #59afb8;
+    transition: all 0.3s;
+}
+
+.exb .right .btn span:hover {
+    background-color: #2dB1BA;
+    color: #fff;
+}
