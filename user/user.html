@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../base.css">
+    <link rel="stylesheet" href="../head/head.css">
+    <link rel="stylesheet" href="../footer/footer.css">
+    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="../common/iconfont/iconfont.css">
+    <script type="text/javascript" src="user.js"></script>
+    <script type="text/javascript" src="../common/jquery/jquery.min.js"></script>
+    <title>个人中心 2024西湖论剑</title>
+</head>
+
+<body>
+    <script type="text/javascript" src="../head/head.js"></script>
+    <div id="app">
+        <!-- 标题 -->
+        <div id="intro">
+            <h1 class="intro">个人中心</h1>
+        </div>
+        <!-- 用户相关信息 -->
+        <div id="user-main">
+            <div id="continer">
+                <div id="left">
+                    <div class="left personalData wow animate__animated animate__fadeInRight" style="visibility: visible; animation-name: fadeInRight;">
+                        <div class="user_name  ">
+                            <h1 class="username" style="color: black;">WuLuuuuu</h1>
+                            <span>线上观众 </span>
+                        </div>
+                        <div class="user_integral">
+                            <p>我的积分</p>
+                            <div><span class="icon-_jifen iconfont"></span> <span class="jf">2500</span></div> <a href="###" class="pointer hover link-button">
+                            点击签到
+                        </a></div>
+                        <div class="user_information">
+                            <ul>
+                                <li><span class="company">公司</span>
+                                    <p class="comp text-overflow"></p>
+                                </li>
+                                <li><span class="department">部门</span>
+                                    <p class="depa"></p>
+                                </li>
+                                <li><span class="position">职位</span>
+                                    <p class="pos"></p>
+                                </li>
+                                <li><span>联系电话</span>
+                                    <p>13538205481</p>
+                                </li>
+                                <li><span class="email">邮箱</span>
+                                    <p class="ema"></p>
+                                </li>
+                            </ul>
+                            <a href="###" class="hover link-button " onClick="change()">修改资料</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="right content wow animate__animated animate__fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                    <div class="tab_nav">
+                        <ul>
+                            <li class="1 active btn"><span class="iconfont icon-dingyue"></span>
+                                <span>我的订阅</span>
+                            </li>
+                            <li class="2 btn">
+                                <span class="iconfont icon-weibiaoti2fuzhi14"></span>
+                                <span>我的积分</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab_content">
+                        <div class="subscribe">
+                            <ul>
+                                <li class="yicheng active" onClick="yicheng()">
+                                    议程订阅
+                                </li>
+                                <li class="wonderful" onClick="wonderful()">
+                                    精彩活动订阅
+                                </li>
+                            </ul>
+                            <div class="subscribe_content">
+                                <div class=" ax-grid ax-grid-3 ax-space-xxl">
+                                    <div class="item ">
+                                        <div class="ax-card-block">
+                                            <div class="ax-img">
+                                                <a href="#" class="ax-figure" style="background-image: url(../images/dingyue_1.jpg);"></a>
+                                                <div class="box">
+                                                    <div class="top">
+                                                        <h1>格致论道@西湖论剑</h1> <span>科普论坛</span>
+                                                        <div href="javascript:;" class="type">
+                                                            观看回放
+                                                        </div>
+                                                    </div>
+                                                    <div class="bottom">
+                                                        <svg t="1709995041890" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1130" width="15" height="15"><path d="M157.866667 512a354.133333 354.133333 0 1 1 708.266666 0 354.133333 354.133333 0 0 1-708.266666 0zM512 98.133333c-228.565333 0-413.866667 185.301333-413.866667 413.866667 0 228.565333 185.301333 413.866667 413.866667 413.866667 228.565333 0 413.866667-185.301333 413.866667-413.866667 0-228.565333-185.301333-413.866667-413.866667-413.866667z m29.866667 243.2a29.866667 29.866667 0 1 0-59.733334 0v213.333334a29.866667 29.866667 0 0 0 15.061334 25.941333l149.333333 85.333333a29.866667 29.866667 0 1 0 29.610667-51.882666L541.866667 537.344V341.333333z" fill="#ffffff" p-id="1131"></path></svg>
+                                                        <span>18:00 - 21:00</span> <span class="iconfont icon-dizhi"></span> <span>杭州市滨江区文化中心剧院一层</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wonderful_content" style="display: none;">
+                                <div class="ax-grid ax-grid-3 ax-space-xxl">
+                                    <div class="item ">
+                                        <div class="ax-card-block">
+                                            <div class="ax-img">
+                                                <a href="javascript:;" class="ax-figure" style="background-image: url(../images/jingcai_1.png);"></a>
+                                            </div>
+                                            <div class="ax-title">
+                                                <h1 class="text-overflow">格致论道@西湖论剑</h1> <span>2023-05-05 18:30 - 21:45&nbsp;</span></div>
+                                            <div class="button"><a href="/activityLive/206.html" target="_blank" class="details hover link-button ">
+                                    查看详情
+                                </a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab_content" style="display: none;">
+                        <div class="integrale">
+                            <ul>
+                                <li class="1 butn active">
+                                    积分规则
+                                </li>
+                                <li class="2 butn">
+                                    积分兑换
+                                </li>
+                                <li class="3 butn">
+                                    积分明细
+                                </li>
+                            </ul>
+                            <div class="jifen rules_content">
+                                <table class="ax-table">
+                                    <tbody>
+                                        <tr>
+                                            <td>用户注册</td>
+                                            <td>+100积分</td>
+                                            <td>注册账号即送100积分 </td>
+                                            <td><span>已注册</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>签到</td>
+                                            <td>+100积分</td>
+                                            <td>签到即送100积分 <span>（每日仅限一次）</span></td>
+                                            <td><span>已签到</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>完善信息</td>
+                                            <td>+1500积分</td>
+                                            <td>完善信息即送1500积分 <span>（仅限一次）</span></td>
+                                            <td><span>已完善</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>观看直播（5分钟以上）</td>
+                                            <td>+2000积分</td>
+                                            <td>观看直播（5分钟以上）即送2000积分 </td>
+                                            <td><span style="background: rgb(238, 238, 238); color: rgb(153, 153, 153);">未开始</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>参与问答游戏</td>
+                                            <td>+400积分</td>
+                                            <td>全对即可获得400积分 </td>
+                                            <td><span style="background: rgb(238, 238, 238); color: rgb(153, 153, 153);">未开始</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>分享</td>
+                                            <td>+200积分</td>
+                                            <td>微信小程序参与分享即送200积分<span>（每日仅限一次）</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>参观线下展商</td>
+                                            <td>+200积分</td>
+                                            <td>线下展商打卡即送200积分<span>（每个展位打卡仅限一次）</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>邀请好友参会</td>
+                                            <td>+500积分</td>
+                                            <td>邀请好友注册即送500积分<span>（小程序邀请）</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <h1>积分规则说明</h1>
+                                <div style="font-size: 10px;">
+                                    1.您所得积分可参与平台不定期开展的物品兑换活动，具体参见每次兑换活动说明；<br> 2. 用户所得积分仅可在活动期间内参与物品兑换活动，活动结束后将无法进行兑换，每个账号用户在活动期间仅能参与3次兑换，您不得通过直接或间接方式利用多个账号获取多次兑换机会；<br> 3. 您获取积分后将有机会获取奖品。请以网站所展示的展品为准（奖品先到先得，全部兑换完为止）<br> 4. 请您勿必知晓，您须按要求填写相关信息，如因用户原因导致无法配送或收货等后果由用户自行承担相关责任；同时，本活动奖品价值为市场参考价值，且您所收到奖品请以所发送的实物为准；<br>                                    5.如您在积分领取及活动过程中存在违规行为（包括但不限于使用多个账号、使用辅助程序等非人为操作方式、利用平台技术漏洞和平台规则漏洞等作弊方式或他不合理方式参与本活动），平台有权取消、冻结您的积分并取消您参与活动的资格，没收相关奖励，情节严重的，平台有权封禁账号并追究用户违规责任；
+                                    <br> 6. 如出现不可抗力或情势变更的情况（包括但不限于重大灾害事件、活动受政府机关指令需要停止举办或调整的、活动遭受严重网络攻击或因系统故障需要暂停举办的），则平台可依相关法律法规的规定主张免责；<br> 7.平台可以根据运营情况对积分规则进行变动或调整，相关变动或调整将公布在活动页面上，公布后依法生效；
+                                    <br> 8. 平台在法律允许的最大范围内对活动拥有解释权。
+                                </div>
+                            </div>
+                            <div class="jifen exchange_content" style="display: none;">
+                                <div class=" ax-grid ax-grid-1 ax-space-xxl">
+                                    <div class="item">
+                                        <div class="ax-card-block">
+                                            <div class="ax-img">
+                                                <a href="###" class="ax-figure" style="background-image: url(../images/32766db3c132417ea4a09924efe87025.jpg);"></a>
+                                            </div>
+                                            <div class="ax-right">
+                                                <div class="ax-title">
+                                                    <h1 class="text-overflow">2021年成都大运会赛事门票</h1>
+                                                    <p>2021年成都大运会赛事门票</p>
+                                                </div>
+                                                <div class="bottom">
+                                                    <p><span>25000</span>积分</p> <a target="_blank" class="details exchange hover link-button">
+                                立即兑换
+                            </a>
+                                                    <!---->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="item">
+                                        <div class="ax-card-block">
+                                            <div class="ax-img">
+                                                <a href="###" class="ax-figure" style="background-image: url(../images/014a39c8a5c440ccbb9549db8bb8c0af.jpg);"></a>
+                                            </div>
+                                            <div class="ax-right">
+                                                <div class="ax-title">
+                                                    <h1 class="text-overflow">2022年杭州第19届亚运会赛事门票</h1>
+                                                    <p>2022年杭州第19届亚运会赛事门票</p>
+                                                </div>
+                                                <div class="bottom">
+                                                    <p><span>30000</span>积分</p> <a target="_blank" class="details exchange hover link-button">
+                                立即兑换
+                            </a>
+                                                    <!---->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="item">
+                                        <div class="ax-card-block">
+                                            <div class="ax-img">
+                                                <a href="###" class="ax-figure" style="background-image: url(../images/7396fbe9f74f404e8764e76e7430b3fa.png);"></a>
+                                            </div>
+                                            <div class="ax-right">
+                                                <div class="ax-title">
+                                                    <h1 class="text-overflow">2023数据安全能力洞察报告</h1>
+                                                    <p>安恒信息围绕国家数字化建设“2522”顶层布局规划，洞悉各行业和各领域数字化转型中的安全挑战和能力需求，梳理切实解决数字安全本质问题的方法和途径，并从安全模式、架构、能力、产业等方向对未来数字安全发展进行了展望。</p>
+                                                </div>
+                                                <div class="bottom">
+                                                    <p><span>8000</span>积分</p> <a target="_blank" class="details exchange hover link-button">
+                                立即兑换
+                            </a>
+                                                    <!---->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="jifen details_content" style="display: none;">
+                                <table stripe="odd" class="ax-table">
+                                    <tbody>
+                                        <tr>
+                                            <th>时间</th>
+                                            <th>操作</th>
+                                            <th>积分变动</th>
+                                        </tr>
+                                        <tr>
+                                            <td>2024-04-02 16:12:47</td>
+                                            <td>签到</td>
+                                            <td>+100积分 </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2024-03-19 22:58:11</td>
+                                            <td>订阅</td>
+                                            <td>+200积分 </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2024-03-12 22:39:37</td>
+                                            <td>完善信息</td>
+                                            <td>+1500积分 </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2024-03-09 20:45:06</td>
+                                            <td>订阅</td>
+                                            <td>+200积分 </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2024-03-03 21:34:17</td>
+                                            <td>签到</td>
+                                            <td>+100积分 </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2024-02-28 22:35:40</td>
+                                            <td>订阅</td>
+                                            <td>+200积分 </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2024-02-26 19:46:55</td>
+                                            <td>签到</td>
+                                            <td>+100积分 </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2024-02-26 19:46:09</td>
+                                            <td>用户注册</td>
+                                            <td>+100积分 </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 修改用户信息 -->
+        <div data-overlay="true" class="ax-dialog popupmodify ax-dialog-show" style="display: none;">
+            <div class="ax-dialog-overlay"></div>
+            <div class="ax-dialog-wrapper"><a href="#" class="ax-dialog-close"><i onClick="clo()"><svg t="1710078293153" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1010" width="35" height="35"><path d="M117.333333 512a394.666667 394.666667 0 1 1 789.333334 0 394.666667 394.666667 0 0 1-789.333334 0zM512 53.333333C258.688 53.333333 53.333333 258.688 53.333333 512S258.688 970.666667 512 970.666667 970.666667 765.312 970.666667 512 765.312 53.333333 512 53.333333z m126.72 630.613334L512 557.226667l-126.72 126.72-45.226667-45.226667L466.773333 512 340.053333 385.28l45.226667-45.226667L512 466.773333l126.72-126.72 45.226667 45.226667L557.226667 512l126.72 126.72-45.226667 45.226667z" fill="#515151" p-id="1011"></path></svg></i></a>
+                <div class="ax-dialog-header">修改资料</div>
+                <div class="ax-dialog-body">
+                    <div class="ax-padding">
+                        <div class="ax-dialog-content">
+                            <form method="post">
+                                <div class="ax-form-group">
+                                    <div class="ax-flex-row">
+                                        <div class="ax-form-label"><span>*</span>姓名：</div>
+                                        <div class="ax-form-con">
+                                            <div class="ax-form-input"><input id="username" name="username" placeholder="请输入姓名" type="text"></div>
+                                            <div class="ax-valid ax-color-danger" style="display: none;"><span class="ax-iconfont ax-icon-close-o-f"></span> 请填写姓名
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ax-break-md"></div>
+                                <div class="ax-form-group">
+                                    <div class="ax-flex-row">
+                                        <div class="ax-form-label"><span>*</span>公司：</div>
+                                        <div class="ax-form-con">
+                                            <div class="ax-form-input"><input id="company" name="company" placeholder="请输入公司名称" type="text"></div>
+                                            <div class="ax-valid ax-color-danger" style="display: none;"><span class="ax-iconfont ax-icon-close-o-f"></span> 请输入公司名称
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ax-break-md"></div>
+                                <div class="ax-form-group">
+                                    <div class="ax-flex-row">
+                                        <div class="ax-form-label"><span>*</span>部门：</div>
+                                        <div class="ax-form-con">
+                                            <div class="ax-form-input"><input id="department" name="department" placeholder="请输入部门名称" type="text"></div>
+                                            <div class="ax-valid ax-color-danger" style="display: none;"><span class="ax-iconfont ax-icon-close-o-f"></span> 请输入部门名称
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ax-break-md"></div>
+                                <div class="ax-form-group">
+                                    <div class="ax-flex-row">
+                                        <div class="ax-form-label"><span>*</span>职位：</div>
+                                        <div class="ax-form-con">
+                                            <div class="ax-form-input"><input id="position" name="position" placeholder="请输入职位名称" type="text"></div>
+                                            <div class="ax-valid ax-color-danger" style="display: none;"><span class="ax-iconfont ax-icon-close-o-f"></span> 请输入职位名称
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ax-break-md"></div>
+                                <div class="ax-form-group">
+                                    <div class="ax-flex-row">
+                                        <div class="ax-form-label"><span>*</span>手机号码：</div>
+                                        <div class="ax-form-con">
+                                            <div class="ax-form-input"><input id="phone" readonly="readonly" name="phone" placeholder="13538205481" type="text" style="background: rgb(234, 234, 234);"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ax-break-md"></div>
+                                <div class="ax-form-group">
+                                    <div class="ax-flex-row">
+                                        <div class="ax-form-label"><span>*</span>邮箱地址：</div>
+                                        <div class="ax-form-con">
+                                            <div class="ax-form-input"><input id="email" name="email" placeholder="请输入邮箱地址" type="text"></div>
+                                            <div class="ax-valid ax-color-danger" style="display: none;"><span class="ax-iconfont ax-icon-close-o-f"></span> 请输入正确的邮箱地址
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ax-break-md"></div> <button type="button" class="submit fnt_18">提交</button></form>
+                        </div>
+                    </div>
+                </div>
+                <div class="ax-dialog-footer"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script type="text/javascript" src="../footer/footer.js"></script>
+</body>
+<script>
+    //点击签到
+    var pointer = document.getElementsByClassName('pointer')[0];
+    var jf = document.getElementsByClassName('jf')[0];
+    pointer.onclick = function() {
+            pointer.style.backgroundColor = '#59afb8';
+            pointer.style.color = '#fff';
+            pointer.innerHTML = '已签到';
+            jf.innerHTML = "2600";
+        }
+        //提交修改后的个人信息
+    var clos = document.getElementsByClassName("ax-dialog")[0];
+    var sub = document.getElementsByClassName('submit')[0];
+    sub.onclick = function() {
+        var username = document.getElementById('username');
+        var company = document.getElementById('company');
+        var department = document.getElementById('department');
+        var position = document.getElementById('position');
+        var email = document.getElementById('email');
+
+        var name = document.getElementsByClassName('username')[0];
+        var comp = document.getElementsByClassName('comp')[0];
+        var depa = document.getElementsByClassName('depa')[0];
+        var pos = document.getElementsByClassName('pos')[0];
+        var ema = document.getElementsByClassName('ema')[0];
+        name.innerHTML = username.value;
+        comp.innerHTML = company.value;
+        depa.innerHTML = department.value;
+        pos.innerHTML = position.value;
+        ema.innerHTML = email.value;
+
+        clos.style.display = 'none';
+    }
+
+    //订阅积分相关栏的切换
+    //订阅
+    var btns = document.getElementsByClassName('btn');
+    var contents = document.getElementsByClassName('tab_content');
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].onclick = function() {
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].classList.remove("active");
+                contents[i].style.display = "none";
+            }
+            this.classList.add("active");
+            if (this.classList[0] == '1') {
+                contents[0].style.display = "block";
+            } else if (this.classList[0] == '2') {
+                contents[1].style.display = "block";
+            }
+        }
+    }
+    //积分
+    var butns = document.getElementsByClassName('butn');
+    var jifens = document.getElementsByClassName('jifen');
+    for (var i = 0; i < butns.length; i++) {
+        butns[i].onclick = function() {
+            for (var i = 0; i < butns.length; i++) {
+                butns[i].classList.remove("active");
+                jifens[i].style.display = "none";
+            }
+            this.classList.add("active");
+            if (this.classList[0] == '1') {
+                jifens[0].style.display = "block";
+            } else if (this.classList[0] == '2') {
+                jifens[1].style.display = "block";
+            } else if (this.classList[0] == '3') {
+                jifens[2].style.display = "block";
+            }
+        }
+    }
+
+    var exchanges = document.getElementsByClassName('exchange');
+    for (var i = 0; i < butns.length; i++) {
+        exchanges[i].onclick = function() {
+            alert("您的积分不足，无法兑换该奖品");
+        }
+    }
+</script>
+
+</html>
