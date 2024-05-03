@@ -1,0 +1,396 @@
+  .player {
+    /* max-width: 750px; */
+    border: 5px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    font-size: 0;
+    overflow: hidden;
+    font-size: 0;
+    width: 862px;
+    height: 479px;
+  }
+
+  /* This css is only applied when fullscreen is active. */
+  .player:fullscreen {
+    max-width: none;
+    width: 100%;
+  }
+
+  .player:-webkit-full-screen {
+    max-width: none;
+    width: 100%;
+  }
+
+  .player__video {
+    width: 100%;
+  }
+
+  .player__button {
+    background: none;
+    border: 0;
+    line-height: 1;
+    color: white;
+    text-align: center;
+    outline: 0;
+    padding: 0;
+    cursor: pointer;
+    max-width: 50px;
+  }
+
+  .player__button:focus {
+    border-color: #ffc600;
+  }
+
+  .player__slider {
+    width: 10px;
+    height: 30px;
+  }
+
+  .player__controls {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(100%) translateY(-20px);
+    transition: all .3s;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  .player:hover .player__controls {
+    transform: translateY(-20px);
+  }
+
+  .player:hover .progress {
+    height: 15px;
+  }
+
+  .player__controls>* {
+    flex: 1;
+  }
+
+  .progress {
+    flex: 10;
+    position: relative;
+    display: flex;
+    flex-basis: 100%;
+    height: 5px;
+    transition: height 0.3s;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: ew-resize;
+  }
+
+  .progress__filled {
+    width: 50%;
+    background: #ffc600;
+    flex: 0;
+    flex-basis: 0%;
+  }
+
+  /* unholy css to style input type="range" */
+
+  input[type=range] {
+    -webkit-appearance: none;
+    background: transparent;
+    width: 100%;
+    margin: 0 5px;
+  }
+
+  input[type=range]:focus {
+    outline: none;
+  }
+
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 1.3px;
+    border: 0.2px solid rgba(1, 1, 1, 0);
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    height: 15px;
+    width: 15px;
+    border-radius: 50px;
+    background: #ffc600;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -3.5px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  }
+
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #bada55;
+  }
+
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+    background: #ffffff;
+    border-radius: 1.3px;
+    border: 0.2px solid rgba(1, 1, 1, 0);
+  }
+
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(13, 13, 13, 0);
+    height: 15px;
+    width: 15px;
+    border-radius: 50px;
+    background: #ffc600;
+    cursor: pointer;
+  }
+
+  .top video {
+    width: 100%;
+  }
+
+  .bot {
+    display: flex;
+  }
+
+  .bot .barrage-color {
+    width: 80px;
+  }
+
+  .bot .barrage-input {
+    width: 240px;
+    margin-left: -15px;
+  }
+
+  .bot .barrage-input input {
+    width: 100%;
+    height: 25px;
+    font-size: 16px;
+  }
+
+  #textColor {
+    width: 50px;
+    height: 25px;
+    border: none;
+  }
+
+  .bot .barrage-btn {
+    flex: 1;
+    text-align: center;
+    background: cyan;
+    line-height: 25px;
+    cursor: pointer;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+
+  .msg {
+    transform: translateX(-100px);
+    position: absolute;
+    z-index: 999;
+    font-weight: 800;
+    animation: l-2-r 6s linear;
+  }
+
+  /* 从左到右的移动动画 */
+  @keyframes l-2-r {
+    from {
+      transform: translateX(500px);
+    }
+
+    to {
+      transform: translateX(-100px);
+    }
+  }
+
+  .box {
+    position: relative;
+  }
+
+  .box .log {
+    position: relative;
+  }
+
+  .box .item{
+    opacity: 0;
+    transition: all 0.3;
+  }
+
+  .box .item.active2{
+    opacity: 1;
+  }
+
+  /* 图标1 */
+
+  .live .liveBroadcast .common_container .left .box .logo .img1 {
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: -60px;
+    left: 97px;
+    transition: all .3s;
+  }
+
+  .box .logo .title1 {
+    opacity: 0;
+    padding: 5px;
+    line-height: 15px;
+    font-size: 10px;
+    color: white;
+    position: absolute;
+    background-color: #333;
+    top: -120px;
+    left: 86px;
+    transition: all 0.3s;
+  }
+
+  .box .logo .active1 {
+    opacity: 1;
+  }
+
+  .active {
+    transform: translateY(-30px);
+  }
+
+  /* 图标2 */
+  .live .liveBroadcast .common_container .left .box .logo .img2 {
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: -60px;
+    left: 170px;
+    transition: all .3s;
+  }
+
+  .box .logo .title2{
+    opacity: 0;
+    font-size: 10px;
+    color: white;
+    position: absolute;
+    background-color: #333;
+    top: -130px;
+    left: 164px;
+    transition: all 0.3s;
+  }
+
+  .box .logo .title2.active1 {
+    opacity: 1;
+  }
+
+
+  /* 图标3 */
+  .live .liveBroadcast .common_container .left .box .logo .img3 {
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: -60px;
+    left: 258px;
+    transition: all .3s;
+  }
+
+  .box .logo .title3{
+    opacity: 0;
+    font-size: 10px;
+    color: white;
+    position: absolute;
+    background-color: #333;
+    padding: 5px;
+    line-height: 15px;
+    width: 100px;
+    top: -130px;
+    left: 228px;
+    transition: all 0.3s;
+  }
+
+  .box .logo .title3.active1 {
+    opacity: 1;
+  }
+
+    /* 图标4 */
+    .live .liveBroadcast .common_container .left .box .logo .img4 {
+      display: block;
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      top: -60px;
+      left: 320px;
+      transition: all .3s;
+    }
+  
+    .box .logo .title4{
+      opacity: 0;
+      font-size: 10px;
+      color: white;
+      position: absolute;
+      background-color: #333;
+      padding: 5px;
+      line-height: 15px;
+      width: 100px;
+      top: -130px;
+      left: 290px;
+      transition: all 0.3s;
+    }
+  
+    .box .logo .title4.active1 {
+      opacity: 1;
+    }
+
+      /* 图标5 */
+  .live .liveBroadcast .common_container .left .box .logo .img5 {
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: -60px;
+    left: 412px;
+    transition: all .3s;
+  }
+
+  .box .logo .title5{
+    opacity: 0;
+    font-size: 10px;
+    color: white;
+    position: absolute;
+    background-color: #333;
+    padding: 5px;
+    line-height: 15px;
+    width: 105px;
+    top: -130px;
+    left: 382px;
+    transition: all 0.3s;
+  }
+
+  .box .logo .title5.active1 {
+    opacity: 1;
+  }
+
+    /* 图标6 */
+    .live .liveBroadcast .common_container .left .box .logo .img6 {
+      display: block;
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      top: -60px;
+      left: 532px;
+      transition: all .3s;
+    }
+  
+    .box .logo .title6{
+      opacity: 0;
+      font-size: 10px;
+      color: white;
+      position: absolute;
+      background-color: #333;
+      padding: 5px;
+      line-height: 15px;
+      width: 100px;
+      top: -130px;
+      left: 500px;
+      transition: all 0.3s;
+    }
+  
+    .box .logo .title6.active1 {
+      opacity: 1;
+    }
