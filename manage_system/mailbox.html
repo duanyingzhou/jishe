@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="renderer" content="webkit">
+
+    <title>收件箱</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link href="css/bootstrap.min.css?v=3.4.0" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css?v=4.3.0" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=2.2.0" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="wrapper">
+         <!-- 导航 -->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li class="nav-header">
+
+                        <div class="dropdown profile-element"> <span>
+                            <img alt="image" class="img-circle" src="./images/b2.jpg" />
+                             </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="index_2.html">
+                                <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">代码写的都很队</strong>
+                             </span>  <span class="text-muted text-xs block">超级管理员 <b class="caret"></b></span> </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="contacts.html">联系我们</a>
+                                </li>
+                                <li><a href="mailbox.html">信箱</a>
+                                </li>
+                                <li><a href="login.html">安全退出</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            代码写的都很队
+                        </div>
+
+                    </li>
+                    <li>
+                        <a href="index_2.html"><i class="fa fa-th-large"></i> <span class="nav-label">主页</span></a>
+                        
+                    </li>
+                                    
+                    <li>
+                        <a href="index_2.html"><i class="fa fa fa-globe"></i> <span class="nav-label">活动管理</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="a1.html">活动管理</a>
+                            </li>
+                            <li><a href="a2.html">活动报名管理</a>
+                            </li>
+                            <li><a href="a3.html">轮播图管理</a>
+                            </li>
+                            <li><a href="a4.html">活动类型管理</a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+
+                    <li  class="active">
+                        <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">信箱 </span><span class="label label-warning pull-right">16</span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="mailbox.html">收件箱</a>
+                            </li>
+                            <li><a href="mail_look.html">查看邮件</a>
+                            </li>
+                            <li><a href="mail_write.html">写信</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="user_houtai.html"><i class="fa fa-flask"></i> <span class="nav-label">后台用户管理</span></a>
+                    </li>
+                   
+                    <li>
+                        <a href="shop.html"><i class="fa fa-laptop"></i> <span class="nav-label">订单管理</span></a>
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </nav>
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="index_2.html#"><i class="fa fa-bars"></i> </a>
+                        <form role="search" class="navbar-form-custom" method="post" action="search_results.html">
+                            
+                        </form>
+                    </div>
+                    <!-- 顶部 -->
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="index.html#">
+                                <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-messages">
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="./images/b1.jpg">
+                                        </a>
+                                        <div class="media-body">
+                                            <small class="pull-right">46小时前</small>
+                                            <strong>小刚</strong> 网站很卡，有时候进不去..
+                                            <br>
+                                            <small class="text-muted">3天前 2024.3.25</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="./images/b3.jpg">
+                                        </a>
+                                        <div class="media-body ">
+                                            <small class="pull-right text-navy">25小时前</small>
+                                            <strong>小刚</strong> 祝愿西湖论剑信息安全大会越办越好
+                                            <br>
+                                            <small class="text-muted">昨天</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="mailbox.html">
+                                            <i class="fa fa-envelope"></i>  <strong> 查看所有消息</strong>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="index.html#">
+                                <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-alerts">
+                                <li>
+                                    <a href="mailbox.html">
+                                        <div>
+                                            <i class="fa fa-envelope fa-fw"></i> 您有16条未读消息
+                                            <span class="pull-right text-muted small">4分钟前</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="profile.html">
+                                        <div>
+                                            <i class="fa fa-qq fa-fw"></i> 3条新回复
+                                            <span class="pull-right text-muted small">12分钟钱</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="notifications.html">
+                                            <strong>查看所有 </strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="login.html">
+                                <i class="fa fa-sign-out"></i> 退出
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+
+            <div class="wrapper wrapper-content">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-content mailbox-content">
+                                <div class="file-manager">
+                                    <a class="btn btn-block btn-primary compose-mail" href="mail_compose.html">写信</a>
+                                    <div class="space-25"></div>
+                                    <h5>文件夹</h5>
+                                    <ul class="folder-list m-b-md" style="padding: 0">
+                                        <li>
+                                            <a href="mailbox.html"> <i class="fa fa-inbox "></i> 收件箱 <span class="label label-warning pull-right">16</span> 
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="mailbox.html"> <i class="fa fa-envelope-o"></i> 发信</a>
+                                        </li>
+                                        <li>
+                                            <a href="mailbox.html"> <i class="fa fa-certificate"></i> 重要</a>
+                                        </li>
+                                        <li>
+                                            <a href="mailbox.html"> <i class="fa fa-file-text-o"></i> 草稿 <span class="label label-danger pull-right">2</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="mailbox.html"> <i class="fa fa-trash-o"></i> 垃圾箱</a>
+                                        </li>
+                                    </ul>
+                                    
+
+                                   
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 animated fadeInRight">
+                        <div class="mail-box-header">
+
+                            <form method="get" action="index.html" class="pull-right mail-search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control input-sm" name="search" placeholder="搜索邮件标题，正文等">
+                                    <div class="input-group-btn">
+                                        <button type="submit" class="btn btn-sm btn-primary">
+                                            搜索
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <h2>
+                    收件箱 (16)
+                </h2>
+                            <div class="mail-tools tooltip-demo m-t-md">
+                                <div class="btn-group pull-right">
+                                    <button class="btn btn-white btn-sm"><i class="fa fa-arrow-left"></i>
+                                    </button>
+                                    <button class="btn btn-white btn-sm"><i class="fa fa-arrow-right"></i>
+                                    </button>
+
+                                </div>
+                                <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="left" title="刷新邮件列表"><i class="fa fa-refresh"></i> 刷新</button>
+                                <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="标为已读"><i class="fa fa-eye"></i> 
+                                </button>
+                                <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="标为重要"><i class="fa fa-exclamation"></i> 
+                                </button>
+                                <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="标为垃圾邮件"><i class="fa fa-trash-o"></i> 
+                                </button>
+
+                            </div>
+                        </div>
+                        <div class="mail-box">
+
+                            <table class="table table-hover table-mail">
+                                <tbody>
+                                    <tr class="unread">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks" checked>
+                                        </td>
+                                        <td class="mail-ontact"><a href="mail_look.html">小明</a>
+                                        </td>
+                                        <td class="mail-subject"><a href="mail_look.html">网站很卡，有时候进不去要怎么解决。直播往往加载不出来</a>
+                                        </td>
+                                        <td class=""><i class="fa fa-paperclip"></i>
+                                        </td>
+                                        <td class="text-right mail-date">昨天 10:20</td>
+                                    </tr>
+                                    <tr class="unread">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks" checked>
+                                        </td>
+                                        <td class="mail-ontact"><a href="mail_detail.html">小刚</a>
+                                        </td>
+                                        <td class="mail-subject"><a href="mail_detail.html">祝愿西湖论剑信息安全大会越办越好</a>
+                                        </td>
+                                        <td class=""></td>
+                                        <td class="text-right mail-date">上午10:57</td>
+                                    </tr>
+                                    <tr class="read">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks">
+                                        </td>
+                                        <td class="mail-ontact"><a href="mail_detail.html">小湖</a>
+                                        </td>
+                                        <td class="mail-subject"><a href="mail_detail.html">希望积分兑换中可以增加一些商品</a>
+                                        </td>
+                                        <td class=""></td>
+                                        <td class="text-right mail-date">上午9:21</td>
+                                    </tr>
+                                    <tr class="read">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks">
+                                        </td>
+                                        <td class="mail-ontact"><a href="mail_detail.html">小红</a>
+                                        </td>
+                                        <td class="mail-subject"><a href="mail_detail.html">活动报名人数满了，可以增添一些人数吗？</a>
+                                        </td>
+                                        <td class=""></td>
+                                        <td class="text-right mail-date">中午12:24</td>
+                                    </tr>
+                                    <tr class="read">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks">
+                                        </td>
+                                        <td class="mail-ontact"><a href="mail_detail.html">小王</a> 
+                                        </td>
+                                        <td class="mail-subject"><a href="mail_detail.html">我的商品什么时候发货啊，已经买了好几天了还不发货！</a>
+                                        </td>
+                                        <td class=""><i class="fa fa-paperclip"></i>
+                                        </td>
+                                        <td class="text-right mail-date">上午6:48</td>
+                                    </tr>
+                                    <tr class="read">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks">
+                                        </td>
+                                        <td class="mail-ontact"><a href="mail_detail.html">小张</a>
+                                        </td>
+                                        <td class="mail-subject"><a href="mail_detail.html">买商品可以开发票吗？</a>
+                                        </td>
+                                        <td class=""><i class="fa fa-paperclip"></i>
+                                        </td>
+                                        <td class="text-right mail-date">昨天 10:20</td>
+                                    </tr>
+                                    <tr class="read">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks">
+                                        </td>
+                                        <td class="mail-ontact"><a href="mail_detail.html">小陈</a>
+                                        </td>
+                                        <td class="mail-subject"><a href="mail_detail.html">嘉宾的ppt怎么不清楚啊，可以上次高清版本的吗？</a>
+                                        </td>
+                                        <td class=""></td>
+                                        <td class="text-right mail-date">上午10:57</td>
+                                    </tr>
+                                    <tr class="read">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks">
+                                        </td>
+                                        <td class="mail-ontact"><a href="mail_detail.html">小吴</a>  <span class="label label-warning pull-right">验证邮件</span> 
+                                        </td>
+                                        <td class="mail-subject"><a href="mail_detail.html">我的订单单号是2017009171822298053可以，尽快为我申请退款</a>
+                                        </td>
+                                        <td class=""></td>
+                                        <td class="text-right mail-date">上午9:21</td>
+                                    </tr>
+                                    <tr class="read">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks">
+                                        </td>
+                                        <td class="mail-ontact"><a href="mail_detail.html">小明</a>
+                                        </td>
+                                        <td class="mail-subject"><a href="mail_detail.html">网站很卡，有时候进不去要怎么解决。直播往往加载不出来</a>
+                                        </td>
+                                        <td class=""><i class="fa fa-paperclip"></i>
+                                        </td>
+                                        <td class="text-right mail-date">昨天 10:20</td>
+                                    </tr>
+                                    <tr class="read">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks">
+                                        </td>
+                                        <td class="mail-ontact"><a href="mail_detail.html">小刚</a>
+                                        </td>
+                                        <td class="mail-subject"><a href="mail_detail.html">祝愿西湖论剑信息安全大会越办越好</a>
+                                        </td>
+                                        <td class=""></td>
+                                        <td class="text-right mail-date">上午10:57</td>
+                                    </tr>
+                                    <tr class="read">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks">
+                                        </td>
+                                        <td class="mail-ontact"><a href="mail_detail.html">小湖</a>
+                                        </td>
+                                        <td class="mail-subject"><a href="mail_detail.html">希望积分兑换中可以增加一些商品</a>
+                                        </td>
+                                        <td class=""></td>
+                                        <td class="text-right mail-date">上午9:21</td>
+                                    </tr>
+                                    <tr class="read">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks">
+                                        </td>
+                                        <td class="mail-ontact"><a href="mail_detail.html">小红</a>
+                                        </td>
+                                        <td class="mail-subject"><a href="mail_detail.html">活动报名人数满了，可以增添一些人数吗？</a>
+                                        </td>
+                                        <td class=""></td>
+                                        <td class="text-right mail-date">中午12:24</td>
+                                    </tr>
+                                    <tr class="read">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks">
+                                        </td>
+                                        <td class="mail-ontact"><a href="mail_detail.html">小王</a> 
+                                        </td>
+                                        <td class="mail-subject"><a href="mail_detail.html">我的商品什么时候发货啊，已经买了好几天了还不发货！</a>
+                                        </td>
+                                        <td class=""><i class="fa fa-paperclip"></i>
+                                        </td>
+                                        <td class="text-right mail-date">上午6:48</td>
+                                    </tr>
+                                    <tr class="read">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks">
+                                        </td>
+                                        <td class="mail-ontact"><a href="mail_detail.html">小张</a>
+                                        </td>
+                                        <td class="mail-subject"><a href="mail_detail.html">买商品可以开发票吗？</a>
+                                        </td>
+                                        <td class=""><i class="fa fa-paperclip"></i>
+                                        </td>
+                                        <td class="text-right mail-date">昨天 10:20</td>
+                                    </tr>
+                                    <tr class="read">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks">
+                                        </td>
+                                        <td class="mail-ontact"><a href="mail_detail.html">小陈</a>
+                                        </td>
+                                        <td class="mail-subject"><a href="mail_detail.html">嘉宾的ppt怎么不清楚啊，可以上次高清版本的吗？</a>
+                                        </td>
+                                        <td class=""></td>
+                                        <td class="text-right mail-date">上午10:57</td>
+                                    </tr>
+                                    <tr class="read">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks">
+                                        </td>
+                                        <td class="mail-ontact"><a href="mail_detail.html">小吴</a>  <span class="label label-warning pull-right">验证邮件</span> 
+                                        </td>
+                                        <td class="mail-subject"><a href="mail_detail.html">我的订单单号是2017009171822298053可以，尽快为我申请退款</a>
+                                        </td>
+                                        <td class=""></td>
+                                        <td class="text-right mail-date">上午9:21</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="pull-right">
+                    By：<a href="http://www.zi-han.net" target="_blank">zihan's blog</a>
+                </div>
+                <div>
+                    <strong>Copyright</strong> H+ &copy; 2014
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js?v=3.4.0"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/hplus.js?v=2.2.0"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+    </script>
+
+    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script><!--统计代码，可删除-->
+
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+.dashbard-1 .row .top {
+    display: flex;
+    width: 340px;
+    height: 38px;
+}
+
+.dashbard-1 .row .top h4{
+    font-size: 18px;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.top{
+    width: 2000px;
+    display: flex;
+    margin-left: 15px;
+}
+
+.top .group{
+    display: flex;
+    margin-right: 10px;
+}
+
+
+th,td{
+    border: 1px solid #999;
+    text-align: center;
+    padding: 20px 0;
+}
+
+table thead tr{
+    background-color: #008c8c;
+    color: #fff;
+}
+
+table tbody tr:nth-child(odd){
+    background-color: #eee;
+}
+
+table tbody tr:hover{
+    background-color: #ccc;
+}
+
+table tbody tr td:first-child{
+    color: #f40;
+}
+
+
+table tbody tr td img{
+     height: 80px;
+}
+    
+
+.fom-group{
+    background-color: pink;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    width: 100%;
+    text-align: center;
+}
+
+.box a {
+    text-align: center;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    line-height: 40px;
+    text-decoration: none;
+    color: black;
+}
+
+.box{
+    margin-top: 20px;
+}
+
+.box .prev,
+.box .next {
+    width: 100px;
+}
+
+.box .current{
+    border: none;
+    background-color:#1ab394;
+    color: #fff;
+    font-weight: 700;
+}
+
+.box .elp {
+    background-color: white;
+    border: none;
+    
+}
+
+.box input {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+}
+
+.box button {
+    width: 40px;
+    height: 40px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+}
+

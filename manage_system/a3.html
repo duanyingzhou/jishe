@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+
+    <title>轮播图管理</title>
+
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    
+    <link href="css/bootstrap.min.css?v=3.4.0" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css?v=4.3.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=2.2.0" rel="stylesheet">
+    <link rel="stylesheet" href="./css/activity_pulish.css">
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- 导航 -->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li class="nav-header">
+
+                        <div class="dropdown profile-element"> <span>
+                            <img alt="image" class="img-circle" src="./images/b2.jpg" />
+                             </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="index_2.html">
+                                <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">代码写的都很队</strong>
+                             </span>  <span class="text-muted text-xs block">超级管理员 <b class="caret"></b></span> </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="contacts.html">联系我们</a>
+                                </li>
+                                <li><a href="mailbox.html">信箱</a>
+                                </li>
+                                <li><a href="login.html">安全退出</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            代码写的都很队
+                        </div>
+
+                    </li>
+                    <li >
+                        <a href="index_2.html"><i class="fa fa-th-large"></i> <span class="nav-label">主页</span></a>
+                        
+                    </li>
+                                    
+                    <li class="active">
+                        <a href="index_2.html"><i class="fa fa fa-globe"></i> <span class="nav-label">活动管理</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="a1.html">活动管理</a>
+                            </li>
+                            <li><a href="a2.html">活动报名管理</a>
+                            </li>
+                            <li><a href="a3.html">轮播图管理</a>
+                            </li>
+                            <li><a href="a4.html">活动类型管理</a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">信箱 </span><span class="label label-warning pull-right">16</span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="mailbox.html">收件箱</a>
+                            </li>
+                            <li><a href="mail_look.html">查看邮件</a>
+                            </li>
+                            <li><a href="mail_write.html">写信</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="user_houtai.html"><i class="fa fa-flask"></i> <span class="nav-label">后台用户管理</span></a>
+                    </li>
+                   
+                    <li>
+                        <a href="shop.html"><i class="fa fa-laptop"></i> <span class="nav-label">订单管理</span></a>
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="index_2.html#"><i class="fa fa-bars"></i> </a>
+                        <form role="search" class="navbar-form-custom" method="post" action="search_results.html">
+                            
+                        </form>
+                    </div>
+                    <!-- 顶部 -->
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="index.html#">
+                                <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-messages">
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="./images/b1.jpg">
+                                        </a>
+                                        <div class="media-body">
+                                            <small class="pull-right">46小时前</small>
+                                            <strong>小刚</strong> 网站很卡，有时候进不去..
+                                            <br>
+                                            <small class="text-muted">3天前 2024.3.25</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="./images/b3.jpg">
+                                        </a>
+                                        <div class="media-body ">
+                                            <small class="pull-right text-navy">25小时前</small>
+                                            <strong>小刚</strong> 祝愿西湖论剑信息安全大会越办越好
+                                            <br>
+                                            <small class="text-muted">昨天</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="mailbox.html">
+                                            <i class="fa fa-envelope"></i>  <strong> 查看所有消息</strong>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="index.html#">
+                                <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-alerts">
+                                <li>
+                                    <a href="mailbox.html">
+                                        <div>
+                                            <i class="fa fa-envelope fa-fw"></i> 您有16条未读消息
+                                            <span class="pull-right text-muted small">4分钟前</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="profile.html">
+                                        <div>
+                                            <i class="fa fa-qq fa-fw"></i> 3条新回复
+                                            <span class="pull-right text-muted small">12分钟钱</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="notifications.html">
+                                            <strong>查看所有 </strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="login.html">
+                                <i class="fa fa-sign-out"></i> 退出
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>轮播图管理</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="index_2.html">首页</a>
+                        </li>
+                        <li>
+                            <a>活动管理</a>
+                        </li>
+                        <li>
+                            <strong>轮播图管理</strong>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+            <div class="top">
+                <div class="group">
+                    <div class="col-md-12">
+                            <div class="">
+                                <select class="form-control" name="" style="padding-right: 100px;">
+                                    <option value="">活动类别</option>
+                                    <option value="">主论坛</option>
+                                    <option value="">掌上论剑</option>
+                                    <option value="">平行论坛</option>
+                                    <option value="">科普论坛</option>
+                                    <option value="">掌上论剑</option>
+                                    <option value="">生态合作论坛</option>
+                                </select>
+                            </div>
+                    </div>
+                </div>
+                
+                <div class="group">
+                    <input type="text" placeholder="请输入轮播标题" class="input-sm form-control"> <span
+                        class="input-group-btn">
+                        <button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
+                </div>
+            </div>
+            <div class="row wrapper">
+                
+                <div class="btn">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                        新建轮播图
+                    </button>
+                </div>
+                <div class="bottom">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>轮播标题</th>
+                                <th>活动图片</th>
+                                <th>活动类别</th>
+                                <th>活动顺序</th>
+
+                                <th>操作</th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>格致论道</td>
+                                <td><img src="./images/lunbo01.png" alt=""></td>
+                                <td>格致论道</td>
+                                <td>1</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#myModal">
+                                        编辑
+                                    </button>
+                                    <button type="button" class="btn btn-primary">
+                                        删除
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>西湖论剑安全特训营</td>
+                                <td><img src="./images/lunbo02.png" alt=""></td>
+                                <td>西湖论剑安全特训营</td>
+                                <td>2</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#myModal">
+                                        编辑
+                                    </button>
+                                    <button type="button" class="btn btn-primary">
+                                        删除
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>新·见未来 实·现梦想</td>
+                                <td><img src="./images/lunbo03.png" alt=""></td>
+                                <td>新品发布</td>
+                                <td>3</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#myModal">
+                                        编辑
+                                    </button>
+                                     <!-- 拟态内容 -->
+                                     <div class="modal inmodal" id="myModal" tabindex="-1" role="dialog"
+                                     aria-hidden="true">
+                                     <div class="modal-dialog">
+                                         <div class="modal-content animated bounceInRight">
+                                             <div class="modal-header">
+                                                 <button type="button" class="close" data-dismiss="modal"><span
+                                                         aria-hidden="true">&times;</span><span
+                                                         class="sr-only">关闭</span>
+                                                 </button>
+                                                 
+                                             </div>
+                                             <!-- 窗口内容 -->
+                                             <div class="modal-body" >
+                                                     <div class="" style="padding: 40px 0px;">
+                                                         <label class="col-sm-3 control-label">轮播标题：</label>
+                                                         <div class="col-sm-9">
+                                                             <input type="text" name="" class="form-control" placeholder="请输入活动标题"> 
+                                                         </div>
+                                                     </div>
+
+                                                
+
+                                                     <div class="" style="padding: 40px 0px;">
+                                                         <label class="col-sm-3 control-label">轮播图片上传：</label>
+                                                         <div class="col-sm-9">
+                                                             <input type="file" name="" class="form-control">
+                                                         </div>
+                                                     </div>
+
+                                                     <div class="" style="padding: 40px 0px;">
+                                                         <label class="col-sm-3 control-label">选择活动类型：</label>
+                                                         <div class="col-sm-9">
+                                                             <select class="form-control" name="">
+                                                                 <option>格致论道</option>
+                                                                 <option>西湖安全特训营</option>
+                                                                 <option>掌上论剑</option>
+                                                                 <option>新品发布</option>
+                                                                 <option>第二直播间</option>
+                                                             </select>
+                                                             
+                                                         </div>
+                                                     </div>
+                                                     <div class="form-group" style="padding: 40px 0px;">
+                                                         <label class="col-sm-3 control-label">轮播顺序：</label>
+                                                         <div class="col-sm-9">
+                                                             <input type="text" name="" class="form-control" placeholder="请输入活动时间">
+                                                 
+                                                         </div>
+                                                     </div>
+                                                 
+                                             </div>
+                                             <div class="modal-footer">
+                                                 <button type="button" class="btn btn-white"
+                                                     data-dismiss="modal">关闭</button>
+                                                 <button type="button" class="btn btn-primary">保存</button>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                                    <button type="button" class="btn btn-primary">
+                                        删除
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="box">
+                        <a href="#" class="prev">&lt;&lt;上一页</a>
+                        <a href="#" class="current">1</a>
+                        <a href="#" >2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#" class="elp">...</a>
+                        <a href="#">50</a>
+                        <a href="#" class="next">&gt;&gt;下一页</a>
+                        到第
+                        <input type="text">
+                        页
+                        <button>确定</button>
+                    </div>
+                  
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+        <!-- Mainly scripts -->
+        <script src="js/jquery-2.1.1.min.js"></script>
+        <script src="js/bootstrap.min.js?v=3.4.0"></script>
+        <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+        <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+        <!-- Custom and plugin javascript -->
+        <script src="js/hplus.js?v=2.2.0"></script>
+        <script src="js/plugins/pace/pace.min.js"></script>
+
+      
+
+        <script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script><!--统计代码，可删除-->
+</body>
+
+</html>
