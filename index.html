@@ -13,15 +13,15 @@
     <script type="text/javascript" src="./login/login.js"></script>
     <style>
         .alert {
-       
-          transition: .5s;
-          opacity: 0;
+
+            transition: .5s;
+            opacity: 0;
         }
-    
+
         .alert.show {
-          opacity: 1;
+            opacity: 1;
         }
-      </style>
+    </style>
 </head>
 
 <body onkeydown="key_down(event.keyCode);">
@@ -35,7 +35,7 @@
             </div>
             <div class="alert alert-success" role="alert">
                 提示消息
-              </div>
+            </div>
             <!-- 登录信息
              用户名    密码-->
             <form id="loginForm">
@@ -56,7 +56,8 @@
                 <div class="input-wrapper">
                     <label>图形验证码:</label>
                     <input type="text" id="yanz" class="input2" placeholder="请图形输入验证码" style="width: 190px;">
-                    <img src="./images/ly.png" alt="" style=" height: 34px;width: 91px;position: absolute;top: 37px;right: 22px;">
+                    <img src="./images/ly.png" alt=""
+                        style=" height: 34px;width: 91px;position: absolute;top: 37px;right: 22px;">
                     <div class="error-pass">
                         <div class="pass-msg"></div>
                         <div class="triangle"></div>
@@ -85,13 +86,14 @@
                 <div class="input-wrapper">
                     <label>图形验证码:</label>
                     <input type="text" id="yanz" class="input2" placeholder="请输入图形验证码" style="width: 190px;">
-                    <img src="./images/ry.png" alt="" style=" height: 34px;width: 91px;position: absolute;top: 37px;right: 22px;">
+                    <img src="./images/ry.png" alt=""
+                        style=" height: 34px;width: 91px;position: absolute;top: 37px;right: 22px;">
                     <div class="error-pass">
                         <div class="pass-msg"></div>
                         <div class="triangle"></div>
                     </div>
                 </div>
-                <input type="button" id="login1" value="注册" class="input4" onClick="register()">
+                <input type="button" id="login1" value="注册" class="input4 zhuce" onClick="register()">
                 <input type="button" name="" value="登录 " class="input3" onClick="toLogin()">
             </form>
         </div>
@@ -102,30 +104,32 @@
     var yzm = document.getElementById("yzm2"); //获取验证码按钮
     var time = 59;
     // 注册单击事件
-    _yzm.addEventListener('click', function() {
-            // 禁用按钮
-            _yzm.disabled = true;
-            // 开启定时器
-            var timer = setInterval(function() {
-                // 判断剩余秒数
-                if (time == 0) {
-                    // 清除定时器和复原按钮
-                    clearInterval(timer);
-                    _yzm.disabled = false;
-                    _yzm.innerHTML = '获取验证码';
-                } else {
-                    _yzm.innerHTML = `重新发送(${time}s)`;
-                    time--;
-                }
-            }, 1000);
-        })
-        // 注册单击事件
+    _yzm.addEventListener('click', function () {
+        alertFn('验证码发送成功', true)
+        // 禁用按钮
+        _yzm.disabled = true;
+        // 开启定时器
+        var timer = setInterval(function () {
+            // 判断剩余秒数
+            if (time == 0) {
+                // 清除定时器和复原按钮
+                clearInterval(timer);
+                _yzm.disabled = false;
+                _yzm.innerHTML = '获取验证码';
+            } else {
+                _yzm.innerHTML = `重新发送(${time}s)`;
+                time--;
+            }
+        }, 1000);
+    })
+    // 注册单击事件
     var time1 = 59;
-    yzm.addEventListener('click', function() {
+    yzm.addEventListener('click', function () {
+        alertFn('验证码发送成功', true)
         // 禁用按钮
         yzm.disabled = true;
         // 开启定时器
-        var timer = setInterval(function() {
+        var timer = setInterval(function () {
             // 判断剩余秒数
             if (time1 == 0) {
                 // 清除定时器和复原按钮
@@ -137,91 +141,121 @@
                 time1--;
             }
         }, 1000);
+
     })
-     
-    
-    
+
+
+
 </script>
 
 <script>
+
     const myAlert = document.querySelector('.alert')
-   function alertFn(msg, isSuccess) {
-      // 1> 显示提示框
-      myAlert.classList.add('show')
+    function alertFn(msg, isSuccess) {
+        // 1> 显示提示框
+        myAlert.classList.add('show')
 
-      // 2> 实现细节
-      myAlert.innerText = msg
-      const bgStyle = isSuccess ? 'alert-success' : 'alert-danger'
-      myAlert.classList.add(bgStyle)
+        // 2> 实现细节
+        myAlert.innerText = msg
+        const bgStyle = isSuccess ? 'alert-success' : 'alert-danger'
+        myAlert.classList.add(bgStyle)
 
-      // 3> 过2秒隐藏
-      setTimeout(() => {
-        myAlert.classList.remove('show')
-        // 提示：避免类名冲突，重置背景色
-        myAlert.classList.remove(bgStyle)
-      }, 2000)
+        // 3> 过2秒隐藏
+        setTimeout(() => {
+            myAlert.classList.remove('show')
+            // 提示：避免类名冲突，重置背景色
+            myAlert.classList.remove(bgStyle)
+        }, 2000)
     }
-    document.querySelector('.input3').addEventListener('click',() =>{
+
+    let zhucetemp = 0
+        document.querySelector('.zhuce').addEventListener('click', () => {
+            zhucetemp = zhucetemp+1
+            console.log(zhucetemp);
+        })
+
+    document.querySelector('.input3').addEventListener('click', () => {
         const account = document.querySelector('.account').value
         const password = document.querySelector('.password').value
         const yzm1 = document.querySelector('#yanz').value
-        const yzmcor = '3n3D'
-        console.log(account,password);
-        if(account.length != 11){
+        
+        console.log(account, password);
+        if (account.length != 11) {
             console.log('手机号长度为11位');
             alertFn('手机号长度为11位', false)
             return
         }
-        if(password.length != 4){
+        if (password.length != 4) {
             console.log('验证码是四位格式');
             alertFn('手机验证码必须是四位', false)
             return
         }
-        if(yzm1 != '3n3D'){
+        if (yzm1 != '3n3D') {
             console.log('图形验证码错误');
             alertFn('图形验证码错误', false)
             return
         }
-        if(account == '18139602609' && password == '4592'){
-            console.log('管理员登录成功');
-            alertFn('管理员登录成功', true)
-            setTimeout(() => {
-                 location.href = './manage_system/index_2.html'
-            },1500)
-            
+        if (account == '18139602609') {
+            if (password == '4592') {
+                console.log('管理员登录成功');
+                alertFn('管理员登录成功', true)
+                setTimeout(() => {
+                    location.href = './manage_system/index_2.html'
+                }, 1500)
+            }
+            else {
+                alertFn('密码错误', false)
+            }
         }
 
-        if(account == '19119220449' && password == '9541'){
-            console.log('登录成功');
-            alertFn('登录成功', true)
-            setTimeout(() => {
-                 location.href = './index/index.html'
-            },1500)
-            
+        if (account == '19119220449') {
+            if (password == '9541') {
+                console.log('登录成功');
+                alertFn('登录成功', true)
+                setTimeout(() => {
+                    location.href = './index/index.html'
+                }, 1500)
+            }
+            else {
+                alertFn('密码错误', false)
+            }
+
         }
 
-        if(account == '15580891234' && password == '5421'){
-            console.log('登录成功');
-            alertFn('登录成功', true)
-            setTimeout(() => {
-                 location.href = './index/index.html'
-            },1500)
-            
+        if (account == '15580891234') {
+            if (password == '5421') {
+                console.log('登录成功');
+                alertFn('登录成功', true)
+                setTimeout(() => {
+                    location.href = './index/index.html'
+                }, 1500)
+            }
+            else {
+                alertFn('密码错误', false)
+            }
+
         }
 
-        if(account == '2201145384' && password == '1234'){
-            console.log('登录成功');
-            alertFn('登录成功', true)
-            setTimeout(() => {
-                 location.href = './index/index.html'
-            },1500)
-            
+        if (account == '2201145384') {
+            if (password == '1234') {
+                console.log('登录成功');
+                alertFn('登录成功', true)
+                setTimeout(() => {
+                    location.href = './index/index.html'
+                }, 1500)
+            }
+            else {
+                alertFn('密码错误', false)
+            }
         }
+
+       
+        
 
         axios({
             url: 'http://localhost:88/user/login',
             method: 'POST',
-            
+
             data: {
                 account,
                 password
@@ -230,20 +264,21 @@
             console.log(result);
             console.log(result.data.message);
             alertFn(result.data.message, true)
-            if(result.data.code === '0'){
+            if (result.data.code === '0') {
                 setTimeout(() => {
-                 location.href = './index/index.html'
-            },1500)
+                    location.href = './index/index.html'
+                }, 1500)
             }
-            
+
 
             // location.href = './index/index.html'
         }).catch(err => {
-        console.log(error)
-        console.log(error.response.data.message)
-        alertFn(error.response.data.message,false)
+            console.log(error)
+            console.log(error.response.data.message)
+            alertFn(error.response.data.message, false)
         });
-        
+
     })
 </script>
+
 </html>

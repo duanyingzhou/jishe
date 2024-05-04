@@ -43,9 +43,9 @@ function validateLoginForm() {
         $(".confirmation").show();
     }
 }
-
 function register() {
     alert("注册成功");
+   
 }
 // 跳转到登录
 function toLogin() {

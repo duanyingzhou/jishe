@@ -22,6 +22,6 @@ document.writeln("            </div>");
 document.writeln("        </div>");
 document.writeln("        <div class=\'user\'>");
 document.writeln("            <span class=\'iconfont icon-yonghu\'><a href=\'../user/user.html\'>个人中心</a></span>");
-document.writeln("            <span><a href=\'../login/login.html\'>退出</a></span>");
+document.writeln("            <span><a href=\'../index.html\'>退出</a></span>");
 document.writeln("        </div>");
 document.writeln("    </div>");
