@@ -27,7 +27,7 @@ html {
     overflow: hidden;
     width: 240px;
     height: 70px;
-    margin: 10px auto 30px;
+    margin: 10px auto 0px;
 }
 
 img {
@@ -74,7 +74,7 @@ img {
     outline: none;
     width: 100%;
     padding: 15px 10px;
-    margin-top: 35px;
+    margin-top: 10px;
     border-radius: 8px;
     background-color: #2cadbc;
     color: white;
@@ -85,7 +85,7 @@ img {
     outline: none;
     width: 100%;
     padding: 15px 10px;
-    margin-top: 35px;
+    margin-top: 10px;
     border-radius: 8px;
     background-color: #207fcd;
     color: white;
